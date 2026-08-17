@@ -1,0 +1,23 @@
+# An array of strings which contain Language Ids defined by VS Code
+languageIds:
+  - javascript
+  - typescript
+  - handlebars
+
+# An array of RegExes to find the key usage. **The key should be captured in the first match group**.
+usageMatchRegex:
+  - "[^\\w\\d]game\\.i18n\\.localize\\(['\"`]({key})['\"`]\\)"
+  - "[^\\w\\d]game\\.i18n\\.format\\(['\"`]({key})['\"`]"
+  - "[^\\w\\d]ui\\.notifications\\.info\\(['\"`]({key})['\"`],\\s{\\s*.*\\slocalize: true\\s*.*}"
+  - "[^\\w\\d]ui\\.notifications\\.warn\\(['\"`]({key})['\"`],\\s{\\s*.*\\slocalize: true\\s*.*}"
+  - "[^\\w\\d]ui\\.notifications\\.error\\(['\"`]({key})['\"`],\\s{\\s*.*\\slocalize: true\\s*.*}"
+  - "\\{\\{\\s*localize\\s+[\"']({key})['\"]\\s*\\}\\}"
+  - "\\{\\{[\\w\\.\\s\\=]*\\(localize\\s+[\"']({key})['\"]\\)[\\w\\.\\s\\=]*\\}\\}"
+  - "\\(localize\\s+[\"']({key})['\"]\\)" # (localize "key")
+  - "localize\\s+[\"']({key})['\"]" # <--- NEW: catches bare localize inside eq()
+  - "data-tooltip\\=[\"']({key})['\"]"
+  - "game\\.i18n\\.localize\\(['\"`]({key})['\"`]\\)"
+  - "label:\\s*['\"`]({key})['\"`]"
+
+# If set to true, only enables this custom framework (will disable all built-in frameworks)
+monopoly: true

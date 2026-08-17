@@ -1,0 +1,41 @@
+{
+  "DCCT": {
+    "characterCreator": "Character Creaton Tool",
+    "characterCreation": {
+      "create": "Create Character",
+      "next": "Select Next Tab",
+      "previous": "Select Previous Tab",
+      "weakness": "Your Character Weakness",
+      "randomWeakness": "Roll for random Weakness",
+      "summary": "Summary of chosen Charaster elments",
+      "memento": "Your Character Memento",
+      "gear": "Ypu Character Gear",
+      "skillsProfession": "Your Character trained skills",
+      "attributes": "Attributes of your Character",
+      "age": "Your Character Age",
+      "name": "Your Character name",
+      "choiceProfession": "Your Character profession",
+      "choiceKin": "Your Character kin",
+      "swapAttributes": "Swap two attribues value with each other",
+      "reset": "Reset all rolled attributes",
+      "swap": "Swap selected attributes",
+      "randomGear": "Roll for random gear for ypur profession",
+      "selectGearOption": "Select option of gear for your profession",
+      "description": "Details of selected Kin",
+      "randomKin": "Roll for random Kin",
+      "randomMemento": "Roll for random memento",
+      "randomProfession": "Roll for random profession",
+      "skillsProfessionAll": "Skills from Your profession",
+      "skillsOther": "All avaliable skills",
+      "selectTable": "Select Random Table",
+      "tableFound": "Use below random table",
+      "ok": "OK",
+      "cancel": "Cancel",
+      "noTableFound": "Select random table",
+      "assigneAttribues": "Assigne rolled value",
+      "rolledValue": "You roll:",
+      "chooseAttribute": "Select attribue to assigne rolled value",
+      "assign": "Assigne"
+    }
+  }
+}

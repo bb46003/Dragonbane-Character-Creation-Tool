@@ -1,7 +1,7 @@
 <section   class="tab attributes {{tabs.attributes.cssClass}}"  action-data="tab"  data-tab="attributes">    
     <div class="block">
         <label>
-            {{localize "DoD.characterCreation.attributes"}}
+            {{localize "DCCT.characterCreation.attributes"}}
             {{#if (not _state.allRolled)}}
                 <a class="fa-solid fa-dice-six" data-action="rollAttributes" data-type="{{attribute.name}}"></a>
             {{/if}}
@@ -18,7 +18,7 @@
         </div>
         <div class="form-group attribute-swap">
             <label>
-                {{localize "DoD.characterCreation.swapAttributes"}}
+                {{localize "DCCT.characterCreation.swapAttributes"}}
             </label>
             <select data-type="1" data-action="swap">
                 {{#each config.attributes as |attribute|}}
@@ -31,8 +31,10 @@
                     <option value="{{@key}}">{{localize attribute}}</option>
                 {{/each}}
             </select>
-            <button data-action="swapValues" {{#if _state.swapAttr}}disabled{{/if}}>{{localize "DoD.characterCreation.swap"}}</button>
-            <button data-action="resetAttributes" >{{localize "DoD.characterCreation.reset"}}</button>
+            <div class="flexrow button">
+                <button data-action="swapValues" {{#if _state.swapAttr}}disabled{{/if}}>{{localize "DCCT.characterCreation.swap"}}</button>
+                <button data-action="resetAttributes" >{{localize "DCCT.characterCreation.reset"}}</button>
+            </div>
         </div>
     </div>
 </section>

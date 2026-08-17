@@ -1,4 +1,4 @@
-import DoD_Utility from "../utility.js";
+import DoD_Utility from "/systems/dragonbane/modules/utility.js";
 
 
 const { HandlebarsApplicationMixin } = foundry.applications.api;
@@ -46,13 +46,14 @@ export default class DoDCharacterCreation extends HandlebarsApplicationMixin(
     id: "character-creator",
     tag: "form",
     window: {
-      title: "DoD.characterCreator",
+      title: "DCCT.characterCreator",
       contentClasses: ["system-dragonbane", "standard-form", "overflow", "character-creation"],
-      resizable: true,
+      resizable: false,
       icon: "fa-solid fa-gears",
     },
     position: {
-      width: 480,
+      width: 550,
+      height: 700
     },
             form: {
             submitOnChange: true,
@@ -72,43 +73,43 @@ export default class DoDCharacterCreation extends HandlebarsApplicationMixin(
   static PARTS = {
     main: {
       template:
-        "systems/dragonbane/templates/apps/character-creation/character-creation.hbs",
+        "modules/dragonbane-character-creation-tool/character-creation/character-creation.hbs",
     },
     profession: {
       template:
-        "systems/dragonbane/templates/apps/character-creation/character-creation-profession.hbs",
+        "modules/dragonbane-character-creation-tool/character-creation/character-creation-profession.hbs",
     },
     kin: {
       template:
-        "systems/dragonbane/templates/apps/character-creation/character-creation-kin.hbs",
+        "modules/dragonbane-character-creation-tool/character-creation/character-creation-kin.hbs",
     },
     age: {
       template:
-        "systems/dragonbane/templates/apps/character-creation/character-creation-age-name.hbs",
+        "modules/dragonbane-character-creation-tool/character-creation/character-creation-age-name.hbs",
     },
     attributes: {
       template:
-        "systems/dragonbane/templates/apps/character-creation/character-creation-attributes.hbs",
+        "modules/dragonbane-character-creation-tool/character-creation/character-creation-attributes.hbs",
     },
     skills: {
       template:
-        "systems/dragonbane/templates/apps/character-creation/character-creation-skills.hbs",
+        "modules/dragonbane-character-creation-tool/character-creation/character-creation-skills.hbs",
     },
     weakness: {
       template:
-        "systems/dragonbane/templates/apps/character-creation/character-creation-weakness.hbs",
+        "modules/dragonbane-character-creation-tool/character-creation/character-creation-weakness.hbs",
     },
     gear: {
       template:
-        "systems/dragonbane/templates/apps/character-creation/character-creation-gear.hbs",
+        "modules/dragonbane-character-creation-tool/character-creation/character-creation-gear.hbs",
     },
     memento:{
       template:
-        "systems/dragonbane/templates/apps/character-creation/character-creation-memento.hbs",
+        "modules/dragonbane-character-creation-tool/character-creation/character-creation-memento.hbs",
     },
     summary:{
       template:
-        "systems/dragonbane/templates/apps/character-creation/character-creation-summary.hbs",
+        "modules/dragonbane-character-creation-tool/character-creation/character-creation-summary.hbs",
     }
   };
   static TABS = {
@@ -138,7 +139,7 @@ export default class DoDCharacterCreation extends HandlebarsApplicationMixin(
     context.numbersOfKins = context.kin.length;
     context.numbersOfProfession = context.profession.length;
     context.selectedKin = context.kin[this._state.selectedKinIndex];
-    context.profession[this._state.selectedProfessionIndex];
+    context.selectedProfession = context.profession[this._state.selectedProfessionIndex];
     context._state = this._state;
     context.tabs[this._state.activeTab].cssClass = "active";
     context.config = CONFIG.DoD;
@@ -575,11 +576,11 @@ _updateSwapOptions(selects) {
     if (tables.length > 0) {
       const result = await foundry.applications.api.DialogV2.wait({
         window: {
-          title: game.i18n.localize("DoD.characterCreation.selectTable"),
+          title: game.i18n.localize("DCCT.characterCreation.selectTable"),
         },
         content: `
                 <p>
-                    ${game.i18n.format("DoD.characterCreation.tableFound", {
+                    ${game.i18n.format("DCCT.characterCreation.tableFound", {
                       kin: targetName,
                     })}
                 </p>
@@ -591,12 +592,12 @@ _updateSwapOptions(selects) {
         buttons: [
           {
             action: "ok",
-            label: game.i18n.localize("DoD.characterCreation.ok"),
+            label: game.i18n.localize("DCCT.characterCreation.ok"),
             default: true,
           },
           {
             action: "cancel",
-            label: game.i18n.localize("DoD.characterCreation.cancel"),
+            label: game.i18n.localize("DCCT.characterCreation.cancel"),
           },
         ],
       });
@@ -616,12 +617,12 @@ _updateSwapOptions(selects) {
 
       const result = await foundry.applications.api.DialogV2.wait({
         window: {
-          title: game.i18n.localize("DoD.characterCreation.selectTable"),
+          title: game.i18n.localize("DCCT.characterCreation.selectTable"),
         },
 
         content: `
                 <p>
-                    ${game.i18n.localize("DoD.characterCreation.noTableFound")}
+                    ${game.i18n.localize("DCCT.characterCreation.noTableFound")}
                 </p>
 
                 <select id="table-select">
@@ -632,12 +633,12 @@ _updateSwapOptions(selects) {
         buttons: [
           {
             action: "roll",
-            label: game.i18n.localize("DoD.characterCreation.roll"),
+            label: game.i18n.localize("DCCT.characterCreation.ok"),
             default: true,
           },
           {
             action: "cancel",
-            label: game.i18n.localize("DoD.characterCreation.cancel"),
+            label: game.i18n.localize("DCCT.characterCreation.cancel"),
           },
         ],
       });
@@ -733,7 +734,7 @@ const selectedSkills = currentTab.querySelectorAll("input[type=checkbox]");
 
 selectedSkills.forEach((checkbox) => {
   if (checkbox.checked) {
-    const flexcol = checkbox.closest("div.flexcol");
+    const flexcol = checkbox.closest("div.flexrow");
 
     if (flexcol) {
       const skillName = flexcol.dataset.name; // if name is stored as data-name
@@ -813,19 +814,19 @@ if (currentTabName === "gear") {
 
     new foundry.applications.api.DialogV2({
       window: {
-        title: game.i18n.localize("DoD.characterCreation.assigneAttribues"),
+        title: game.i18n.localize("DCCT.characterCreation.assigneAttribues"),
       },
 
       content: `
             <div>
                 <p>
-                    ${game.i18n.localize("DoD.characterCreation.rolledValue")}
+                    ${game.i18n.localize("DCCT.characterCreation.rolledValue")}
                     <strong>${rolledValue}</strong>
                 </p>
 
                 <div class="form-group">
                     <label>
-                        ${game.i18n.localize("DoD.characterCreation.chooseAttribute")}
+                        ${game.i18n.localize("DCCT.characterCreation.chooseAttribute")}
                     </label>
 
                     <select name="attribute">
@@ -838,7 +839,7 @@ if (currentTabName === "gear") {
       buttons: [
         {
           action: "assign",
-          label: game.i18n.localize("DoD.characterCreation.assign"),
+          label: game.i18n.localize("DCCT.characterCreation.assign"),
           callback: (event, button, dialog) => {
             const attribute = dialog.element.querySelector(
               "select[name='attribute']",
@@ -858,7 +859,7 @@ if (currentTabName === "gear") {
 
         {
           action: "cancel",
-          label: game.i18n.localize("DoD.characterCreation.cancel"),
+          label: game.i18n.localize("DCCT.characterCreation.cancel"),
         },
       ],
     }).render(true);
