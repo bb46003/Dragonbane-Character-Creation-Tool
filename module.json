@@ -1,0 +1,34 @@
+{
+  "id": "dragonbane-character-creation-tool",
+  "title": "Dragonbane Character Creation Tool",
+  "version": "vDev",
+  "compatibility": {
+    "minimum": "14",
+    "verified": "14"
+  },
+  "authors": [
+    {
+      "name": "BartekB",
+      "discord": "bartek6199",
+      "flags": {}
+    }
+  ],
+  "esmodules": ["src/main.mjs"],
+  "styles": ["dragonbane-character-creation-tool.css"],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    },
+    {
+      "lang": "pl",
+      "name": "Polski",
+      "path": "lang/pl.json"
+    }
+  ],
+  "socket": true,
+  "description": "",
+  "url": "Filled in by the release workflow",
+  "download": "Filled in by the release workflow"
+}
