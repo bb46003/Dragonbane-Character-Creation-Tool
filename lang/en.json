@@ -35,7 +35,17 @@
       "assigneAttribues": "Assigne rolled value",
       "rolledValue": "You roll:",
       "chooseAttribute": "Select attribue to assigne rolled value",
-      "assign": "Assigne"
+      "assign": "Assigne",
+      "or": "or",
+      "chooseOption": "Chose equipment option"
+    },
+    "currency": {
+      "gold": "gold",
+      "silver": "silver",
+      "copper": "copper"
+    },
+    "message": {
+      "flavor": "Roll for {flavor}"
     }
   }
 }

@@ -1,0 +1,51 @@
+{
+  "DCCT": {
+    "characterCreator": "Narzędzie tworzenia postaci",
+    "characterCreation": {
+      "create": "Stwórz postać",
+      "next": "Przejdź do następnej zakładki",
+      "previous": "Przejdź do poprzedniej zakładki",
+      "weakness": "Słabość Twojej postaci",
+      "randomWeakness": "Wylosuj losową słabość",
+      "summary": "Podsumowanie wybranych elementów postaci",
+      "memento": "Pamiątka Twojej postaci",
+      "gear": "Ekwipunek Twojej postaci",
+      "skillsProfession": "Umiejętności wyuczone w ramach profesji",
+      "attributes": "Atrybuty Twojej postaci",
+      "age": "Wiek Twojej postaci",
+      "name": "Imię Twojej postaci",
+      "choiceProfession": "Wybierz profesję swojej postaci",
+      "choiceKin": "Wybierz rasę swojej postaci",
+      "swapAttributes": "Zamień między sobą wartości dwóch atrybutów",
+      "reset": "Zresetuj wszystkie wylosowane atrybuty",
+      "swap": "Zamień wybrane atrybuty",
+      "randomGear": "Wylosuj losowy ekwipunek dla swojej profesji",
+      "selectGearOption": "Wybierz wariant ekwipunku dla swojej profesji",
+      "description": "Szczegóły wybranej rasy",
+      "randomKin": "Wylosuj losową rasę",
+      "randomMemento": "Wylosuj losową pamiątkę",
+      "randomProfession": "Wylosuj losową profesję",
+      "skillsProfessionAll": "Umiejętności związane z Twoją profesją",
+      "skillsOther": "Wszystkie dostępne umiejętności",
+      "selectTable": "Wybierz tabelę losową",
+      "tableFound": "Użyj poniższej tabeli losowej",
+      "ok": "OK",
+      "cancel": "Anuluj",
+      "noTableFound": "Wybierz tabelę losową",
+      "assigneAttribues": "Przypisz wylosowaną wartość",
+      "rolledValue": "Wylosowana wartość:",
+      "chooseAttribute": "Wybierz atrybut, do którego przypisać wylosowaną wartość",
+      "assign": "Przypisz",
+      "or": "lub",
+      "chooseOption": "Wybierz opcje ekwipunku"
+    },
+    "currency": {
+      "gold": "złota",
+      "silver": "srebra",
+      "copper": "miedzi"
+    },
+    "message": {
+      "flavor": "Rzut na {flavor}"
+    }
+  }
+}

@@ -7,14 +7,21 @@ export default class CreateActor {
   }
   async create() {
     const name = this.data.name;
-    const attributes = this.data.attributes;
+    let attributes = this.data.attributes;
     const age = this.data.age;
     const userId = this.user_id;
 
     const allSet = Object.values(attributes).every((value) => value !== 0);
 
     if (!allSet) {
-      return;
+      attributes = {
+        str: 10,
+        con: 10,
+        agl: 10,
+        int: 10,
+        wil: 10,
+        cha: 10,
+      };
     }
 
     const system = {
@@ -74,6 +81,110 @@ export default class CreateActor {
             skill: skillName,
           });
         }
+      }
+    }
+    const gear = this.data.selectedGear;
+    if (gear !== "") {
+      const entries = [];
+
+      const itemRegex =
+        /(?:(\d+)(?:\{[^}]*\})?x)?@UUID\[([^\]]+)\]\{([^}]+)\}/g;
+
+      for (const match of gear.matchAll(itemRegex)) {
+        entries.push({
+          type: "item",
+          uuid: match[2],
+          name: match[3],
+          quantity: Number(match[1] ?? 1),
+        });
+      }
+      const currencyTypes = {
+        gc: [game.i18n.localize("DCCT.currency.gold").toLowerCase(), "gold"],
+        sc: [
+          game.i18n.localize("DCCT.currency.silver").toLowerCase(),
+          "silver",
+        ],
+        cc: [
+          game.i18n.localize("DCCT.currency.copper").toLowerCase(),
+          "copper",
+        ],
+      };
+
+      const currencyNames = Object.values(currencyTypes)
+        .flat()
+        .map((name) => name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"));
+      const currencyRegex = new RegExp(
+        `(\\d+)(?:\\{[^}]*\\})?\\s+(${currencyNames.join("|")})`,
+        "gi",
+      );
+      console.log(gear.matchAll(currencyRegex));
+      for (const match of gear.matchAll(currencyRegex)) {
+        const quantity = Number(match[1]);
+        const currencyName = match[2].toLowerCase();
+        const currencyType = Object.entries(currencyTypes).find(([, names]) =>
+          names.includes(currencyName),
+        )?.[0];
+        if (!currencyType) continue;
+        entries.push({
+          type: "currency",
+          currency: currencyType,
+          quantity,
+        });
+      }
+      let wornWeapons = 0;
+      let wornArmor = 0;
+      let wornHelmet = 0;
+      for (const entry of entries.filter((entry) => entry.type === "item")) {
+        const item = await fromUuid(entry.uuid);
+
+        if (!item) continue;
+
+        const data = item.toObject();
+
+        data.system.quantity = entry.quantity;
+
+        if (item.system?.worn !== undefined) {
+          if (item.type === "weapon") {
+            if (wornWeapons < 3) {
+              data.system.worn = true;
+              wornWeapons++;
+            } else {
+              data.system.worn = false;
+            }
+          } else if (item.type === "armor") {
+            if (wornArmor < 1) {
+              data.system.worn = true;
+              wornArmor++;
+            } else {
+              data.system.worn = false;
+            }
+          } else if (item.type === "helmet") {
+            if (wornHelmet < 1) {
+              data.system.worn = true;
+              wornHelmet++;
+            } else {
+              data.system.worn = false;
+            }
+          }
+        }
+
+        await actor.createEmbeddedDocuments("Item", [data]);
+      }
+      const currencyUpdates = {};
+      for (const entry of entries.filter(
+        (entry) => entry.type === "currency",
+      )) {
+        currencyUpdates[entry.currency] =
+          (currencyUpdates[entry.currency] ?? 0) + entry.quantity;
+      }
+      const actorUpdates = {};
+      for (const [currency, quantity] of Object.entries(currencyUpdates)) {
+        const path = `system.currency.${currency}`;
+        const current = foundry.utils.getProperty(actor, path) ?? 0;
+        actorUpdates[path] = current + quantity;
+      }
+      if (Object.keys(actorUpdates).length > 0) {
+        await actor.update(actorUpdates);
       }
     }
     const skills = this.data.selectedSkills;

@@ -45,7 +45,7 @@
                     <label>
                         {{localize attribute}}
                     </label>
-                    <input type="number" value="{{lookup ../_state.attributes @key}}" min="1" max="18" disabled/>
+                    <span>{{lookup ../_state.attributes @key}}</span>
                 </div>
             {{/each}}
         </div>
@@ -62,7 +62,7 @@
             </div>
         </div>
         <div class="flexrow">
-        {{#if (ne _state.gear "")}}
+        {{#if (ne _state.selectedGear "")}}
             <label>{{localize "DCCT.characterCreation.gear"}}</label>
          <ul>  
             {{#each gearName as |gear|}}

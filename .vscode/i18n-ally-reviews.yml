@@ -7,924 +7,924 @@ reviews:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: jqYemqquvO6PWMp4cQiPc
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-11-20T20:52:56.811Z"
+            time: '2024-11-20T20:52:56.811Z'
   chlopcy.nowe_szlify.etykieta:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: 3z9B2wDFkORs4Wlnd0XWh
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-11-20T21:01:05.130Z"
+            time: '2024-11-20T21:01:05.130Z'
   chlopcy.sakwy:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: m2YdeU4c_4eBAaK5qwHua
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-11-20T21:23:43.059Z"
+            time: '2024-11-20T21:23:43.059Z'
   chlopcy.przytkanie:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: zWOrfcmMYAoJPQMLEaVT8
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-11-20T22:53:20.951Z"
+            time: '2024-11-20T22:53:20.951Z'
   chlopcy.krwawienie:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: 0OwrmxE-T5YeLzR4yqRvn
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-11-20T22:53:57.048Z"
+            time: '2024-11-20T22:53:57.048Z'
   chlopcy.odciecie:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: rDtGP1Ph3vygEJcxD_ZNg
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-11-20T22:54:16.148Z"
+            time: '2024-11-20T22:54:16.148Z'
   chlopcy.sprzet_osobisty:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: f9DCOw9p0qi1Sj6X1UY9Q
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-11-20T22:54:49.879Z"
+            time: '2024-11-20T22:54:49.879Z'
   chlopcy.dodaj_wiezi:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: YfxvFnpKxMlTHyolyIjiZ
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-11-20T22:56:22.202Z"
+            time: '2024-11-20T22:56:22.202Z'
   chlopcy.dodaj_wiez:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: 9T-vNeXeSVcBJmPiW1lde
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-11-20T23:01:38.091Z"
+            time: '2024-11-20T23:01:38.091Z'
   chlopcy.wybierz_tag:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: qm7ciLI4f-uDMIO9SCiOq
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-11-24T12:46:43.767Z"
+            time: '2024-11-24T12:46:43.767Z'
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: nYVLjFdlib1k6sbvL6nJ3
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-11-24T12:47:21.151Z"
+            time: '2024-11-24T12:47:21.151Z'
   chlopcy.bez_tagu:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: L2Xs748Vgt66XbCbzAGdp
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-11-24T15:31:59.152Z"
+            time: '2024-11-24T15:31:59.152Z'
   chlopcy.BANGARANG:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: GQxV1C99NdfYj1s-vPvUa
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-11-25T13:23:37.234Z"
+            time: '2024-11-25T13:23:37.234Z'
   chlopcy.rzut.BANGARANG:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: ntMms_au3ERW2ELVqx4FX
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-11-25T13:24:01.810Z"
+            time: '2024-11-25T13:24:01.810Z'
   chlopcy.rzut.dwa_osiagi:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: XckxNdvVdkAD022SLimx_
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-11-25T13:25:54.004Z"
+            time: '2024-11-25T13:25:54.004Z'
   chlopcy.rzut.jeden_osiag:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: UUWtq_zjWzWFi4RGmD5ZA
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-11-25T13:27:10.469Z"
+            time: '2024-11-25T13:27:10.469Z'
   chlopcy.rzut.klopoty:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: dXd3LCesMM2kDD6Oh9wMW
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-11-25T13:59:56.177Z"
+            time: '2024-11-25T13:59:56.177Z'
   chlopcy.rzut.brak_osiagow:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: wh11k98muoX9HA3KpxCHH
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-11-25T14:01:07.808Z"
+            time: '2024-11-25T14:01:07.808Z'
   chlopcy.czat.wynik_KB:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: 2q5VK8owNEYpiYbUT6qsC
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-11-25T14:31:32.636Z"
+            time: '2024-11-25T14:31:32.636Z'
   chlopcy.czat.dostepne_KM:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: n0Vb2dmVoxfuyukpn-BUT
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-11-25T14:42:33.056Z"
+            time: '2024-11-25T14:42:33.056Z'
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: MxFuzx1vDbdHCItraK7L8
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-11-25T14:58:32.124Z"
+            time: '2024-11-25T14:58:32.124Z'
   chlopcyczat.mod_tagu:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: bCe78Qseg8yjIeyTx-eR7
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-11-25T14:58:11.811Z"
+            time: '2024-11-25T14:58:11.811Z'
   chlopcy.czat.wynik_KM:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: J5gbsQSOQlT6le5eKQOej
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-11-25T22:34:30.228Z"
+            time: '2024-11-25T22:34:30.228Z'
   chlopcy.czat.wynik_RDT:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: 9kwuoH6HKhC8MyTzv048-
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-11-25T22:47:37.797Z"
+            time: '2024-11-25T22:47:37.797Z'
   chlopcy.dialog.wybierz_tag:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: CLxy7N4yazSVbERgfZQgZ
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-11-25T23:41:44.158Z"
+            time: '2024-11-25T23:41:44.158Z'
   chlopcy.rzut.trzy_osiagi:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: U0CGtpjy3AAEhKRzn9PEP
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-11-26T08:21:00.427Z"
+            time: '2024-11-26T08:21:00.427Z'
   chlopcy.czat.pech:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: YoBUiPLrVMUFgp0pLIetl
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-11-26T08:39:12.805Z"
+            time: '2024-11-26T08:39:12.805Z'
   chlopcy.czat.nie_zdobyto_osiagow_przedmiot_nie_pomogl:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: rvcy0U20bAaZGEU9CbPwr
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-11-26T13:59:05.338Z"
+            time: '2024-11-26T13:59:05.338Z'
   chlopcy.rzut.masz_komplikacje:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: PjUPdUab84ZYBYrYm7TY0
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-11-27T11:01:12.754Z"
+            time: '2024-11-27T11:01:12.754Z'
   chlopcy.dodatkowy_bonus:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: AyrzSqBgtHtG1JE9-U8kZ
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-12-04T21:08:20.201Z"
+            time: '2024-12-04T21:08:20.201Z'
   chlopcy.dialog.dodatkowa_KM:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: UH59RgdNynncng4eiBwJA
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-12-04T21:12:36.289Z"
+            time: '2024-12-04T21:12:36.289Z'
   chlopcy.dialog.naglowek_dodatkowa_KM:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: 8aKc05nzgMvfGdJ3opf-Q
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-12-04T21:16:45.735Z"
+            time: '2024-12-04T21:16:45.735Z'
   chlopcy.czat.wynik_DKM:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: QylAOouOpibZqc3WHGjse
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-12-05T21:04:26.271Z"
+            time: '2024-12-05T21:04:26.271Z'
   chlopcy.dialog.przerzut_wielku_KM:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: brxLNvvW8qZ9vUkDjGp-o
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-12-06T14:22:31.846Z"
+            time: '2024-12-06T14:22:31.846Z'
   chlopcy.dialog.pierwsza_KM:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: j5kEPDfZY0IeTlrxDPUcs
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-12-06T14:25:26.052Z"
+            time: '2024-12-06T14:25:26.052Z'
   chlopcy.dialog.druga_KM:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: QM553OWPR7WIwdqh5ZKjf
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-12-06T14:25:43.238Z"
+            time: '2024-12-06T14:25:43.238Z'
   chlopcy.dialog.wybierz_KM_do_przerzutu:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: dscv4_62ne2fzyZqTDD9O
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-12-06T14:31:11.093Z"
+            time: '2024-12-06T14:31:11.093Z'
   chlopcy.dialog.kliknij_na_kosc_ktora-chcesz-przerzucic:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: lLptYJEoIoV9UinCSOi_b
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-12-06T14:42:18.359Z"
+            time: '2024-12-06T14:42:18.359Z'
   DB-IB.settings.stashItems:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: YQ9HxmKvA60tThNcEg4BU
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-12-19T15:17:33.801Z"
+            time: '2024-12-19T15:17:33.801Z'
   DB-IB.settings.hintStashItems:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: hp5Ru_VfC4wNej55FtSD6
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-12-19T15:19:14.057Z"
+            time: '2024-12-19T15:19:14.057Z'
   DB-IB.openItemBrowser:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: q8UWaf80Fa8oVEgEf0DUt
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-12-20T08:57:26.986Z"
+            time: '2024-12-20T08:57:26.986Z'
   DB-IB.sellItem:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: E7a7kCgbvQvYhTqBffttj
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-12-20T08:58:04.234Z"
+            time: '2024-12-20T08:58:04.234Z'
   DB-IB.Chat.sellItem:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: uLwViqCW_vBRMznBCQbAX
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-12-20T10:00:12.194Z"
+            time: '2024-12-20T10:00:12.194Z'
   DB-IB.Chat.increasPrice:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: tjkT4lWrC4-5ANOVm8gwZ
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-12-20T11:28:51.164Z"
+            time: '2024-12-20T11:28:51.164Z'
   DB-IB.Chat.increasePriceDragon:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: 4swaV4qesfMz9gtHPmJ_d
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-12-20T11:31:37.873Z"
+            time: '2024-12-20T11:31:37.873Z'
   DB-IB.Chat.nochangeInPriceSell:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
-            id: "-1sry-URCivV7B63YTwf5"
-            comment: ""
-            suggestion: ""
+              email: ''
+            id: '-1sry-URCivV7B63YTwf5'
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-12-20T11:32:18.782Z"
+            time: '2024-12-20T11:32:18.782Z'
   DB-IB.Chat.sellItemButton:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: na9cY-Jp3AGw02Jjq0CLS
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-12-20T11:33:27.079Z"
+            time: '2024-12-20T11:33:27.079Z'
   DB-IB.addItemToCharacter:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: B1Tl5F-66MpuKVY_VOKB4
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-09T13:50:09.118Z"
+            time: '2025-01-09T13:50:09.118Z'
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: 58S4FPt49AUqyi5XLNxSk
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-09T13:50:28.782Z"
+            time: '2025-01-09T13:50:28.782Z'
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: BtuXrQlYIVBfgjgWSbj3y
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-09T13:50:32.448Z"
+            time: '2025-01-09T13:50:32.448Z'
   DB-IB.buyItem:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: ixPzZu1MdFj-hXfxnW4-j
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-09T13:52:43.870Z"
+            time: '2025-01-09T13:52:43.870Z'
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: 5tgcm8FJ9rhL9W2qJERZA
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-09T13:52:46.513Z"
+            time: '2025-01-09T13:52:46.513Z'
   DB-IB.stashItem:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: ez8FvzHOuvQlkoxr9UFzk
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-10T13:27:32.459Z"
+            time: '2025-01-10T13:27:32.459Z'
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: aBEX1w5n9LpeJ_1PaZfmU
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-10T13:27:56.049Z"
+            time: '2025-01-10T13:27:56.049Z'
   DB-IB.stash:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
-            id: "-EYpm-KeuifAJjH865T7V"
-            comment: ""
-            suggestion: ""
+              email: ''
+            id: '-EYpm-KeuifAJjH865T7V'
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-10T14:09:53.698Z"
+            time: '2025-01-10T14:09:53.698Z'
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: 3IIEipchaGIOO-xpK-x40
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-10T14:09:55.925Z"
+            time: '2025-01-10T14:09:55.925Z'
   DB-IB.settings.stash:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: 9K2Vwf8U_ApRCxxCppeqT
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-10T14:23:12.190Z"
+            time: '2025-01-10T14:23:12.190Z'
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: FnuVHuTV15YQBqOwdMI6F
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-10T14:23:16.019Z"
+            time: '2025-01-10T14:23:16.019Z'
   DB-IB.settings.hintStash:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: 11mu0omKZ7fZAji1MEIrn
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-10T14:24:54.727Z"
+            time: '2025-01-10T14:24:54.727Z'
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: XKY9S7tkZ3uX9IRvZjP6k
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-10T14:24:56.956Z"
+            time: '2025-01-10T14:24:56.956Z'
   DB-IB.SellWithoutBarter:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: ZqEcqRYllzbscvclo8pV9
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-20T11:24:53.991Z"
+            time: '2025-01-20T11:24:53.991Z'
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: AYwbhog_5chxGG6Kv4o0e
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-20T11:24:56.055Z"
+            time: '2025-01-20T11:24:56.055Z'
   DB-IB.merchant.setting:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: ZLrRUCG10lrLF5OBCciDq
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-20T15:33:21.172Z"
+            time: '2025-01-20T15:33:21.172Z'
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: BbiMCTK3PMtBzepAK_dG2
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-20T15:33:23.160Z"
+            time: '2025-01-20T15:33:23.160Z'
   DB-IB.merchant.selling:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: qqX6GGVv4Ugn0UHB3Hmge
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-20T15:34:31.208Z"
+            time: '2025-01-20T15:34:31.208Z'
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: U6uR1-JAZ9hdiTH6V82VS
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-20T15:35:36.461Z"
+            time: '2025-01-20T15:35:36.461Z'
   DB-IB.merchant.buing:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: zlPCKqq8zZC16B4OyYgHM
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-20T15:35:01.044Z"
+            time: '2025-01-20T15:35:01.044Z'
   DB-IB.merchant.setSellingRate:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: Dcsf7kAGRzecbEPHBFyzo
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-21T09:04:19.306Z"
+            time: '2025-01-21T09:04:19.306Z'
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: cZTrMxtrwmUn7zH19udp5
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-21T09:11:32.187Z"
+            time: '2025-01-21T09:11:32.187Z'
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: PBHVGSLDHVNRy3gwBsS0S
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-21T09:04:21.416Z"
+            time: '2025-01-21T09:04:21.416Z'
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: _Sp6SFlwMqFB72BTSe6MW
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-21T09:11:35.422Z"
+            time: '2025-01-21T09:11:35.422Z'
   DB-IB.merchant.setBuingRate:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: 4BBuTfIHUQ_Vm80WVAZLk
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-21T09:11:06.595Z"
+            time: '2025-01-21T09:11:06.595Z'
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: ZNnH-TMjGfLYQ6APEX9xu
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-21T09:11:09.026Z"
+            time: '2025-01-21T09:11:09.026Z'
   DB-IB.warrning.incoretInput:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: v-oujoP0lhKoq6rECGSZP
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-21T13:21:45.882Z"
+            time: '2025-01-21T13:21:45.882Z'
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: L-qlukmb6dzjH6y6k2jZY
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-21T13:21:58.166Z"
+            time: '2025-01-21T13:21:58.166Z'
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: bW7QQhxxE3PQbOiU6X3OZ
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-21T13:21:48.030Z"
+            time: '2025-01-21T13:21:48.030Z'
   DB-IB.merchant.allowedSupply:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: xKT57iux8so4heEjYWWSX
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-21T14:12:20.735Z"
+            time: '2025-01-21T14:12:20.735Z'
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: 8HoE6baYgsKJPHljuS35G
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-21T14:12:33.920Z"
+            time: '2025-01-21T14:12:33.920Z'
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: Y60stNFQ_B1oibexTuSQj
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-21T14:12:23.572Z"
+            time: '2025-01-21T14:12:23.572Z'
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: RCO1W7xbiN7GYWbLiAGNd
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-21T14:12:53.421Z"
+            time: '2025-01-21T14:12:53.421Z'
   DB-IB.merchant.sells:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: YFsLiLyem4LDo20aPHW6W
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-22T10:06:32.518Z"
+            time: '2025-01-22T10:06:32.518Z'
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: N61Wy02izw2f81O2MedhH
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-22T10:06:35.162Z"
+            time: '2025-01-22T10:06:35.162Z'
             resolved: true
   DB-IB.itemPrice:
     locales:
@@ -932,2465 +932,2575 @@ reviews:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: rg93Kb1wtPxlMdodzi-rj
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-22T10:18:05.238Z"
+            time: '2025-01-22T10:18:05.238Z'
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: 0gQwwzA04hdN-jKbPhEM1
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-22T10:18:08.572Z"
+            time: '2025-01-22T10:18:08.572Z'
   DB-IB.merchant.notAcceptSuply:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: xTDnayQzM-PD6d-mduVYU
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-22T10:47:48.406Z"
+            time: '2025-01-22T10:47:48.406Z'
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: QnJxy-7_0xHKeUNK_wVdi
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-22T10:47:50.305Z"
+            time: '2025-01-22T10:47:50.305Z'
   DB-IB.warrning.youAreNotOwnerOfDeletedItem:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: K0BnibWg4_c6uHMedH6t-
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-22T13:03:59.592Z"
+            time: '2025-01-22T13:03:59.592Z'
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: TeFig-YKnrvrbETPuThHF
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-22T13:04:01.913Z"
+            time: '2025-01-22T13:04:01.913Z'
   DB-IB.Chat.actorSells:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: Pm_71JoHOf1TNBn030XSn
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-22T14:14:54.994Z"
+            time: '2025-01-22T14:14:54.994Z'
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: LkcnLWIDYWpV4WtY6qFDy
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-22T14:15:32.363Z"
+            time: '2025-01-22T14:15:32.363Z'
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: EynvwY6c88RrY1ZoWsGGM
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-22T14:17:22.098Z"
+            time: '2025-01-22T14:17:22.098Z'
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: CUxKD-SUhMw0vybF3O0qr
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-22T14:15:35.501Z"
+            time: '2025-01-22T14:15:35.501Z'
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: vfAB3rENnf3jqIU8xToHp
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-22T14:17:37.179Z"
+            time: '2025-01-22T14:17:37.179Z'
   DB-IB.Chat.and:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: 7sSvy_QKUEI0ZRBkou63A
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-22T14:46:15.792Z"
+            time: '2025-01-22T14:46:15.792Z'
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: n4FZSuLmB1dsYMLqaBBZk
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-22T14:46:18.774Z"
+            time: '2025-01-22T14:46:18.774Z'
   DB-IB.dialog.denfieQuantity:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: Z1-M6gvZmFzUtNlTWZB2j
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-22T15:01:30.437Z"
+            time: '2025-01-22T15:01:30.437Z'
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: rrpC2_-tIAuzgXmpatEU2
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-22T15:01:33.119Z"
+            time: '2025-01-22T15:01:33.119Z'
   DB-IB.dialog.selectSellingQuantity:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: JTbnG5ShWsqLztnvGR3L0
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-22T15:07:58.637Z"
+            time: '2025-01-22T15:07:58.637Z'
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: VwnEJqHrP9U47k7FdgXk2
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-22T15:08:01.709Z"
+            time: '2025-01-22T15:08:01.709Z'
   DB-IB.merchant.nonGMaddItemsToSell:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: HXbAe26Y0FaV7STc9NfEr
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-02-25T12:56:03.723Z"
+            time: '2025-02-25T12:56:03.723Z'
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: 6T6UFTc1mSefBUixosMNA
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-02-25T12:56:09.747Z"
+            time: '2025-02-25T12:56:09.747Z'
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: OdsEzo_g9myJCWZKXtftU
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-02-25T12:56:12.489Z"
+            time: '2025-02-25T12:56:12.489Z'
   DB-IB.warrning.merchantDoNotHaveMoreItem:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: 7EX7TW-iyQgDoI2V7T38G
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-03-31T07:45:48.714Z"
+            time: '2025-03-31T07:45:48.714Z'
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: bGOcHuykCL3-PanHPnDxV
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-03-31T07:45:51.408Z"
+            time: '2025-03-31T07:45:51.408Z'
   DB-IB.dialog.selectActor:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: HmGix8qdxdAlpBB9kbZom
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-03-31T07:48:27.666Z"
+            time: '2025-03-31T07:48:27.666Z'
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: raB3hJ-NkNiidZTZxt9Sh
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-03-31T07:48:30.473Z"
+            time: '2025-03-31T07:48:30.473Z'
   DB-IB.dialog.buy:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: GylPUwKp55Ii610DbXh8K
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-03-31T07:49:03.715Z"
+            time: '2025-03-31T07:49:03.715Z'
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: yx3KTinVgZt8vHoVJ33mg
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-03-31T07:49:06.687Z"
+            time: '2025-03-31T07:49:06.687Z'
   DB-IB.dialog.sell:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: pj8JlUoYk5kxZUQIktuN7
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-03-31T07:50:56.099Z"
+            time: '2025-03-31T07:50:56.099Z'
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: 0UkQaDjlPh76-b55Bwb-v
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-03-31T07:50:58.323Z"
+            time: '2025-03-31T07:50:58.323Z'
   DB-IB.warrning.youDoNotSellAnything:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: OwQO51FK544slt3LBjjLC
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-03-31T12:54:25.070Z"
+            time: '2025-03-31T12:54:25.070Z'
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: xiJBS4PAdRq6xU4rhKpKg
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-03-31T12:54:28.238Z"
+            time: '2025-03-31T12:54:28.238Z'
   DB-IB.dialog.openMerchantSheet:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: w3k9sDpeq_8EQi_NIa3Ra
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-05-16T12:25:07.571Z"
+            time: '2025-05-16T12:25:07.571Z'
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: 3pcv6mJWmZLvppgRkLW2P
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-05-16T12:25:10.039Z"
+            time: '2025-05-16T12:25:10.039Z'
   DB-IB.dialog.youAttempToOpenMerchantSheet:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: DK9c3PtFj1u53V_CPsQK7
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-05-16T12:28:58.933Z"
+            time: '2025-05-16T12:28:58.933Z'
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: dw5IKEOkysysFjUedDKZS
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-05-16T12:29:01.306Z"
+            time: '2025-05-16T12:29:01.306Z'
   DB-IB.title:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: Zl113zn9Uh379rsIPlO6k
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-06-27T10:50:57.390Z"
+            time: '2025-06-27T10:50:57.390Z'
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: hCZn5CDkpRYO-21n1T16s
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-06-27T10:51:02.739Z"
+            time: '2025-06-27T10:51:02.739Z'
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: rT_nTaf32zIPeBo7Pz83E
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-06-27T10:51:25.369Z"
+            time: '2025-06-27T10:51:25.369Z'
   sofh.actoor.relationQuestion:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: YIo0w0iRhd385EmA8tbZD
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-09-19T12:51:53.539Z"
+            time: '2025-09-19T12:51:53.539Z'
   sofh.ui.actor.gryffindor:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: E4H3eBDhFcY9J6ErCu5OP
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-09-19T13:06:51.930Z"
+            time: '2025-09-19T13:06:51.930Z'
   sofh.ui.relationships.lost_valuable_returned:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: kTr2Wt8NIcqigUaGcJfV-
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-10-02T12:13:36.035Z"
+            time: '2025-10-02T12:13:36.035Z'
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: tgZCQokX-DFdoUnASfsXL
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-10-02T12:15:59.087Z"
+            time: '2025-10-02T12:15:59.087Z'
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: rKS8kdrGmJaGIKrNFZe8-
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-10-02T12:13:41.507Z"
+            time: '2025-10-02T12:13:41.507Z'
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: OGsz0ONmjnIMot7yZMwKC
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-10-02T12:15:46.668Z"
+            time: '2025-10-02T12:15:46.668Z'
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: WiGinWBNHzJj0PH2ncK0x
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-10-02T12:16:11.376Z"
+            time: '2025-10-02T12:16:11.376Z'
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: DIoxPIYk-adNX9Ok58FJx
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-10-02T12:16:27.312Z"
+            time: '2025-10-02T12:16:27.312Z'
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: 4qHnFani-azR0e_Bq7G-y
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-10-02T12:17:03.825Z"
+            time: '2025-10-02T12:17:03.825Z'
   sofh.ui.relationships.comforted_in_vulnerability:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: KNTNQ-5_d6G3NqT4rtgBA
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-10-02T12:14:00.300Z"
+            time: '2025-10-02T12:14:00.300Z'
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: fZ-8AXf8H-UVvq1753V8F
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-10-02T12:14:59.038Z"
+            time: '2025-10-02T12:14:59.038Z'
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: dNYLnwNQW3XqyimZKplPU
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-10-02T12:14:11.649Z"
+            time: '2025-10-02T12:14:11.649Z'
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: zs4GRvP_G4C3b9XGyhpME
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-10-02T12:14:37.621Z"
+            time: '2025-10-02T12:14:37.621Z'
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: LMHOL0Kvdo3unIIymt_bC
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-10-02T12:15:04.412Z"
+            time: '2025-10-02T12:15:04.412Z'
   sofh.ui.relationships.long_time_crush:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: mI7unf8YRhxTh7zgBO7FJ
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-10-02T12:19:37.970Z"
+            time: '2025-10-02T12:19:37.970Z'
   sofh.ui.relationships.survived_with_help:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: iMSQ4_IaHyJiMtMmnNAKZ
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-10-02T12:20:21.108Z"
+            time: '2025-10-02T12:20:21.108Z'
   sofh.ui.relationships.trust_with_secrets:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: Wglj5c4u0Ekg7w3fd7nom
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-10-02T12:20:49.436Z"
+            time: '2025-10-02T12:20:49.436Z'
   sofh.ui.relationships.caught_cheating:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: nMBA6ygnk_rUCLahDZVbD
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-10-02T12:22:04.429Z"
+            time: '2025-10-02T12:22:04.429Z'
   sofh.actor.reputation_questions:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: MtMQmOBxG7d_jqOE_W3pp
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-10-08T09:53:29.849Z"
+            time: '2025-10-08T09:53:29.849Z'
   sofh.ui.actor.reputation_questions:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: WCVDGXOiRinW_BeB5ele-
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-10-08T09:54:55.967Z"
+            time: '2025-10-08T09:54:55.967Z'
   sofh.dialog.reputation-heder:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: hAT3t1CKt_y_AVcPKSjNN
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-10-08T10:55:06.309Z"
+            time: '2025-10-08T10:55:06.309Z'
   sofh.dialog.reputation.gryfindor1:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: 8wf4kAZpDFy08-15cpsnG
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-10-08T11:01:20.833Z"
+            time: '2025-10-08T11:01:20.833Z'
   sofh.move.endSesionMove:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: 0lzG_5W-ZMQM2tvtKyYqU
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-10-09T11:10:12.521Z"
+            time: '2025-10-09T11:10:12.521Z'
   chlopcy.dialog.koniex_sesji:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: Io98ZfOops-VKxo_QsVuJ
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-10-15T09:53:29.498Z"
+            time: '2025-10-15T09:53:29.498Z'
   chlopcy.dialog.pytanie1:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: kxfPAMzdkwYoJ2F6u6qz_
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-10-15T09:55:05.333Z"
+            time: '2025-10-15T09:55:05.333Z'
   chlopcy.dialog.pytanie2:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: H4JRKMReqFByQWVG_WVzZ
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-10-15T09:56:34.276Z"
+            time: '2025-10-15T09:56:34.276Z'
   chlopcy.dialog.pytanie3:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: DvorAPQxYPng4ShmxvKVh
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-10-15T09:56:47.810Z"
+            time: '2025-10-15T09:56:47.810Z'
   chlopcy.dialog.pytanie4:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: W9ftKk10UDjXyim7_sMBn
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-10-15T09:56:59.491Z"
+            time: '2025-10-15T09:56:59.491Z'
   chlopcy.dialog.przypominajka:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: 3CihB8gZZV_SJ27rsUjRq
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-10-15T09:59:47.819Z"
+            time: '2025-10-15T09:59:47.819Z'
   chlopcy.dialog.zyskaj_xp:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: uF2UaGlo2d0K1tZmwmNHe
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-10-15T10:04:19.625Z"
+            time: '2025-10-15T10:04:19.625Z'
   chlopcy.dialog.wybierz_dzieciaka:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: N-ju-DxMqdXyLpiUW7Slz
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-10-15T10:23:31.234Z"
+            time: '2025-10-15T10:23:31.234Z'
   chlopcy.chat.zyskaneXP:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: DroRCJW0_7CU5utCfT16u
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-10-15T10:42:45.860Z"
+            time: '2025-10-15T10:42:45.860Z'
   chlopcy.dialog.wybierz_aktor:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: PHs4zQYCGeimLlF4JmK01
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-10-15T11:16:51.689Z"
+            time: '2025-10-15T11:16:51.689Z'
   chlopcy.dialog.wybierz_swojego_dzieciaka:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: FbZdLU2vY_McE_mDDbSR-
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-10-15T11:17:39.487Z"
+            time: '2025-10-15T11:17:39.487Z'
   awanturnik20.actor.name:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: s7MR3vDwYMvl4Ck9a01DS
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-15T07:43:17.916Z"
+            time: '2026-05-15T07:43:17.916Z'
   awanturnik20.actor.sciezka:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: pCh17liaEf0zJU3qqMIZc
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-15T07:45:22.117Z"
+            time: '2026-05-15T07:45:22.117Z'
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: uMS2Elo-zMiCEd0hgjYdV
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-18T12:33:55.870Z"
+            time: '2026-05-18T12:33:55.870Z'
   awanturnik20.actor.poziom:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: XH81RBOd5l_zPKZvt7D-T
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-15T07:45:34.213Z"
+            time: '2026-05-15T07:45:34.213Z'
   awanturnik20.actor.gatunek:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: iD4bEmNvXQgPkdVMNRrAP
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-15T07:45:43.532Z"
+            time: '2026-05-15T07:45:43.532Z'
   awanturnik20.actor.plec:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: 0Sv073ILVMBxwxXCcg_CW
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-15T07:45:52.092Z"
+            time: '2026-05-15T07:45:52.092Z'
   awantnurik20.actor.kompetencje.typ:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: RT0B_3q6KGFbFTQJaPGdc
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-18T12:04:40.466Z"
+            time: '2026-05-18T12:04:40.466Z'
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: 9Mel2I_6P4O4SLAXWhyCU
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-18T12:29:05.035Z"
+            time: '2026-05-18T12:29:05.035Z'
   awantnurik20.actor.kompetencje.kompetencje:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: xcqT_1Y-kvbvm4-UQbz7f
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-18T12:04:53.382Z"
+            time: '2026-05-18T12:04:53.382Z'
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: yPBTFES4L_cURflHkKqOt
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-18T12:29:44.742Z"
+            time: '2026-05-18T12:29:44.742Z'
   awantnurik20.actor.kompetencje.mod_cz:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: PKGoAFToN3cWaIqkqumvB
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-18T12:05:13.070Z"
+            time: '2026-05-18T12:05:13.070Z'
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: y7gFDVFo7_b1vyXHfoc2e
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-18T12:29:59.566Z"
+            time: '2026-05-18T12:29:59.566Z'
   awantnurik20.actor.kompetencje.kosci_bieg:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: 8e5Ir-1n8rqLjqhZlDF_D
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-18T12:05:23.167Z"
+            time: '2026-05-18T12:05:23.167Z'
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: huqjeMhmOXkflcnmGDeST
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-18T12:30:11.450Z"
+            time: '2026-05-18T12:30:11.450Z'
   awantnurik20.actor.kompetencje.inne_mod:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: 88S9t0Ox5rPVJIqStls8j
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-18T12:05:32.369Z"
+            time: '2026-05-18T12:05:32.369Z'
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: 68Pm3vCoVUifVmUhbYh-E
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-18T12:30:23.339Z"
+            time: '2026-05-18T12:30:23.339Z'
   awanturnik20.actor.name_placeholder:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: wsXaCDqw4F69S-Elw-ms_
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-18T13:30:55.802Z"
+            time: '2026-05-18T13:30:55.802Z'
   awanturnik20.actor.ekwipunek:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: _cjublT46leZgUqpIcSkC
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-18T14:05:57.036Z"
+            time: '2026-05-18T14:05:57.036Z'
   awanturnik20.actor.charakter.os_porzadku_4:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: CA5B3oWASs1c_CLKBD5W8
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-22T07:33:49.114Z"
+            time: '2026-05-22T07:33:49.114Z'
   awanturnik20.actor.rutyny.label:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: t83PiEDJoMs_XOQZxIrIf
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-22T09:08:15.935Z"
+            time: '2026-05-22T09:08:15.935Z'
   awanturnik20.actor.czary.label:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: ZgAImfLtPgWrSmvAsU4FS
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-22T09:08:35.510Z"
+            time: '2026-05-22T09:08:35.510Z'
   awanturnik20.actor.kontuzje_stany.label:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: P7HPctNiJ7OFFcfyiL5ys
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-22T09:08:52.591Z"
+            time: '2026-05-22T09:08:52.591Z'
   awanturnik20.actor.biografia.label:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: rfaEAfTDnOLHeSbpvD42K
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-22T09:09:03.440Z"
+            time: '2026-05-22T09:09:03.440Z'
   awanturnik20.actor.notatki.label:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: S2GHoUG9Xw57DL3Yg6Vl-
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-22T09:09:12.123Z"
+            time: '2026-05-22T09:09:12.123Z'
   awanturnik20.actor.pieniadze:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: SCH0NYoln1dVNxd2-rV-Q
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-22T11:56:51.533Z"
+            time: '2026-05-22T11:56:51.533Z'
   awanturnik20.actor.pancerz:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: twX08Pdzd3Xa6BhG46iQq
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-24T16:35:00.296Z"
+            time: '2026-05-24T16:35:00.296Z'
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: dyKASQO9rntx7gmlSIRAG
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-28T07:56:09.200Z"
+            time: '2026-05-28T07:56:09.200Z'
   awanturnik20.actor.bronie:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: yO5NWhqAdBr2s6XpcItkE
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-24T16:35:15.209Z"
+            time: '2026-05-24T16:35:15.209Z'
   awanturnik20.actor.inne:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: uSWTICUm9mZ4Z8xyOAQbr
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-24T16:35:31.002Z"
+            time: '2026-05-24T16:35:31.002Z'
   awanturnik20.actor.wyglad.wiek:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: UVYwKx5TlaW7y8Px9N0eh
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-25T11:19:39.313Z"
+            time: '2026-05-25T11:19:39.313Z'
   awanturnik20.actor.wyglad.waga:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: OJlU5OhqqcU7zJ8BawatK
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-25T11:19:53.320Z"
+            time: '2026-05-25T11:19:53.320Z'
   awanturnik20.actor.wyglad.wzrost:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: w7Y8_2WQQbDe5LwE_YqNQ
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-25T11:20:06.924Z"
+            time: '2026-05-25T11:20:06.924Z'
   awanturnik20.actor.wyglad.opis:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: fwr_1ZO2jqLKrxMyYDD4v
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-25T11:21:55.673Z"
+            time: '2026-05-25T11:21:55.673Z'
   awanturnik20.actor.wyglad.label:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: 7q3GwNZf35z9JMHMDdKQU
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-25T12:41:19.613Z"
+            time: '2026-05-25T12:41:19.613Z'
   awanturnik20.actor.otworz:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: KuXnewAEk39cLnHwf1v-4
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-26T12:55:06.264Z"
+            time: '2026-05-26T12:55:06.264Z'
   awanturnik20.actor.usun:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: c6x5-PB6wGKjGbPosviLW
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-26T12:55:23.594Z"
+            time: '2026-05-26T12:55:23.594Z'
   awanturnik20.actor.zdejmij:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: 9aFRsCeiuKE1DOZ91x8ua
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-26T13:44:22.976Z"
+            time: '2026-05-26T13:44:22.976Z'
   awanturnik20.actor.zalorz:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: d1s4AbwaH_WElSBIvb4UZ
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-26T13:44:38.677Z"
+            time: '2026-05-26T13:44:38.677Z'
   awanturnik20.item.pancerz.max_zr:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: _E55iz-Hxzopbib4lCp9l
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-26T14:46:43.737Z"
+            time: '2026-05-26T14:46:43.737Z'
   awanturnik20.item.pancerz.mod_kp:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: 9PKSIkjihtgyTNg--MlGo
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-26T14:47:40.612Z"
+            time: '2026-05-26T14:47:40.612Z'
   awanturnik20.item.pancerz.max_zr_label:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: aarCOOfvxYIc2n2nI_CXI
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-26T14:48:07.903Z"
+            time: '2026-05-26T14:48:07.903Z'
   awanturnik20.item.cena:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: fm0XfJb5m0ofk5ef4ykkO
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-26T14:48:19.708Z"
+            time: '2026-05-26T14:48:19.708Z'
   awanturnik20.item.opis:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: AP-2TB-pPrYR82ezBnKWv
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-26T14:48:37.772Z"
+            time: '2026-05-26T14:48:37.772Z'
   awanturnik20.item.pancerz.noszony:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: vkZwZWQR04DJBcPjOcEpS
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-26T14:48:49.784Z"
+            time: '2026-05-26T14:48:49.784Z'
   awanturnik20.actor.kp.mod_zr:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: V8bAfMy71M-2_stqBcYMN
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-26T14:51:03.029Z"
+            time: '2026-05-26T14:51:03.029Z'
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: rh4Vk2zOfrhEJwGJUWDsp
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-26T14:52:20.536Z"
+            time: '2026-05-26T14:52:20.536Z'
   awanturnik20.actor.kp.mod_pancerz:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: oXqD9ExL8VbTcKvwOrdAm
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-26T14:51:16.694Z"
+            time: '2026-05-26T14:51:16.694Z'
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: 1DVw85r5uv193edOku0nb
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-26T14:51:37.342Z"
+            time: '2026-05-26T14:51:37.342Z'
   awanturnik20.item.pancerz.data:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: HgPBoBj2uP-BDDEuE2TD8
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-26T14:54:11.162Z"
+            time: '2026-05-26T14:54:11.162Z'
   awanturnik20.item.pancerz.opis:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: OO9CZq6JFV6RIrWRrzqDb
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-26T14:54:19.476Z"
+            time: '2026-05-26T14:54:19.476Z'
   awanturnik20.item.pancerz.name_placeholder:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: 2a4PXmf5T7RTbdgrFDI6p
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-26T14:54:36.527Z"
+            time: '2026-05-26T14:54:36.527Z'
   awanturnik20.item.tarcza.reka:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: b7LHq-RzaN4x3i4U51jJo
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-28T07:51:28.945Z"
+            time: '2026-05-28T07:51:28.945Z'
   awanturnik20.item.tarcza.typ:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: BlYU2Go_CGcUko1KNjwdM
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-28T07:51:44.165Z"
+            time: '2026-05-28T07:51:44.165Z'
   awanturnik20.item.tarcz.cena:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: k7ZAHJqAur1qmlvnWU4jh
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-28T07:52:13.349Z"
+            time: '2026-05-28T07:52:13.349Z'
   awanturnik20.item.tarcza.data:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: LWiW0g6CIi-qwWb9IcLf8
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-28T07:53:03.633Z"
+            time: '2026-05-28T07:53:03.633Z'
   awanturnik20.item.tarcza.name_placeholder:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: 24YciswItJBgev1lxDMSJ
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-28T07:55:17.067Z"
+            time: '2026-05-28T07:55:17.067Z'
   awanturnik20.actor.nazwa:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: byA0v-h590l7-Mz9gBduZ
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-28T10:27:42.749Z"
+            time: '2026-05-28T10:27:42.749Z'
   awanturnik20.actor.noszony:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: d9SefN1xTX0vp4T2atMoz
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-28T10:27:54.022Z"
+            time: '2026-05-28T10:27:54.022Z'
   awanturnik20.actor.kary:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: LpntvTolWEI-NXrUns7P4
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-28T10:28:03.822Z"
+            time: '2026-05-28T10:28:03.822Z'
   awanturnik20.actor.zdejmij_tarcze:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: k6okhg9AKKrIb6x9x2lfK
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-28T12:08:13.755Z"
+            time: '2026-05-28T12:08:13.755Z'
   awanturnik20.actor.zalorz_tarcze:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: kCARAxNsv6hHoVFudbWpw
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-28T12:08:29.132Z"
+            time: '2026-05-28T12:08:29.132Z'
   awanturnik20.actor.kp_mod.mod_tarcza:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: aoM18HFGGyPu8CYUv9ZD6
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-28T13:21:52.460Z"
+            time: '2026-05-28T13:21:52.460Z'
   awanturnik20.item.bron.walsciwosci:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: ErcCpw-Z1qyOjM5KseM_-
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-29T13:22:33.755Z"
+            time: '2026-05-29T13:22:33.755Z'
   awanturnik20.item.bron.typ:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: n4P9MVNiU0Xl57rojc5OF
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-29T13:22:51.538Z"
+            time: '2026-05-29T13:22:51.538Z'
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: 2U4VOPo6eXVJFhrXeV_IJ
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-29T13:22:56.654Z"
+            time: '2026-05-29T13:22:56.654Z'
   awanturnik20.item.bron.cena:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: d2fa8aUsX-J8FU_qwx_0P
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-29T13:23:25.036Z"
+            time: '2026-05-29T13:23:25.036Z'
   awanturnik20.item.bron.trzeci_zasieg:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: xdjk8kkwdSb9i30-3Ugkz
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-29T13:23:51.659Z"
+            time: '2026-05-29T13:23:51.659Z'
   awanturnik20.item.bron.drugi_zasieg:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: gtMDkn8Zmr0tzgDyYUpei
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-29T13:24:06.249Z"
+            time: '2026-05-29T13:24:06.249Z'
   awanturnik20.item.bron.pierwszy_zasieg:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: pvtNqTgIcviQ1GdtgUhM9
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-29T13:24:22.663Z"
+            time: '2026-05-29T13:24:22.663Z'
   awanturnik20.item.bron.posiadaZasieg:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: cD4u_Ax-xeUAi-d0PJ3fq
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-29T13:24:37.781Z"
+            time: '2026-05-29T13:24:37.781Z'
   awanturnik20.item.bron.powiazana_kompetencja:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: KWubEdG7BCiiSCuCNnTzR
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-29T13:24:57.431Z"
+            time: '2026-05-29T13:24:57.431Z'
   awanturnik20.item.bron.ilosc_kosci_trafienia:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: P9_k2JPNhf4lXIXYGGDN8
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-29T13:25:58.112Z"
+            time: '2026-05-29T13:25:58.112Z'
   awanturnik20.item.bron.typ_kosci:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: GgB-aaic4W36vJmsVC4X1
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-29T13:26:15.820Z"
+            time: '2026-05-29T13:26:15.820Z'
   awanturnik20.item.bron.reka:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: hTBgfLZJ-M1TCKOpQUp7x
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-29T13:30:36.242Z"
+            time: '2026-05-29T13:30:36.242Z'
   awanturnik20.item.bron.name_placeholder:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: x5x9TdgyTmMGc-34Vh_yD
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-29T14:00:16.894Z"
+            time: '2026-05-29T14:00:16.894Z'
   awanturnik20.item.bron.data:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: EMHNi1oROxNZUsGZxIT5u
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-29T14:00:43.127Z"
+            time: '2026-05-29T14:00:43.127Z'
   awanturnik20.item.bron.pt.label:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: m4cH18nC69swR6n-S13Mn
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-29T14:15:55.427Z"
+            time: '2026-05-29T14:15:55.427Z'
   awanturnik20.item.bron.pt_1r:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: GHCJ4NEQYEJsawpWKE6YT
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-29T14:25:14.982Z"
+            time: '2026-05-29T14:25:14.982Z'
   awanturnik20.item.bron.pt_2r:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: c0B0fHKPUBchSjtVvGU0-
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-05-29T14:25:39.028Z"
+            time: '2026-05-29T14:25:39.028Z'
   awanturnik20.item.bron.typ_obrazen.label:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: SecULcTynvx3GTadlUF03
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-06-01T13:30:52.378Z"
+            time: '2026-06-01T13:30:52.378Z'
   awanturnik20.pt:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: g6mhd71kx0GH-lq5YM4ZR
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-06-01T13:34:10.369Z"
+            time: '2026-06-01T13:34:10.369Z'
   awanturnik20.item.przedmiot.waga:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: MAsFWPrJ0JNvxeJwcAkit
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-06-03T07:45:19.487Z"
+            time: '2026-06-03T07:45:19.487Z'
   awanturnik20.item.przedmiot.ilosc:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: WABMmb7moNz0VJRM0PMAA
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-06-03T07:45:39.989Z"
+            time: '2026-06-03T07:45:39.989Z'
   awanturnik20.item.przedmiot.cena:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: fzX1pQ0qSRjZ9oeLrQVwb
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-06-03T08:15:08.689Z"
+            time: '2026-06-03T08:15:08.689Z'
   awanturnik20.item.przedmiot.name_placeholder:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: XnyRz9H3UfAviW1tUhN1j
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-06-03T08:16:24.719Z"
+            time: '2026-06-03T08:16:24.719Z'
   awanturnik20.item.gatunek.ilosc_kompetencji:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: buJGC1Oorh4kkGhIPRCO0
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-06-03T12:40:19.943Z"
+            time: '2026-06-03T12:40:19.943Z'
   awanturnik20.item.gatunek.os_wartosci.conoty:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: QGJnWe4mGujwSGfh_K4W9
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-06-03T12:40:57.060Z"
+            time: '2026-06-03T12:40:57.060Z'
   awanturnik20.item.gatunek.os_wartosci.zalety:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: 6skzTNM5aM-dCXY47v5cK
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-06-03T12:41:18.994Z"
+            time: '2026-06-03T12:41:18.994Z'
   awanturnik20.item.gatunek.os_wartosci.wady:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: F9Mxqm6m28QGvyu6KEvcX
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-06-03T12:41:35.593Z"
+            time: '2026-06-03T12:41:35.593Z'
   awanturnik20.item.gatunek.os_wartosci.przywary:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: TsCEzzu_2py0IWR9uqr78
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-06-03T12:41:53.341Z"
+            time: '2026-06-03T12:41:53.341Z'
   awanturnik20.item.gatunek.jezyk:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: nVzacAO5ohiCrX9-8F1_m
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-06-03T12:42:05.620Z"
+            time: '2026-06-03T12:42:05.620Z'
   awanturnik20.item.gatunek.lore_Etrii:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: xjN9F5h4YLYEzRxRCtJuo
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-06-03T12:42:49.876Z"
+            time: '2026-06-03T12:42:49.876Z'
   awanturnik20.item.gatunek.archetyp_fabularny:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: ZoCHKZ18zlrWvQRHeMc41
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-06-03T12:43:05.675Z"
+            time: '2026-06-03T12:43:05.675Z'
   awanturnik20.item.gatunek.pt.modyfikator:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
-            id: "-fhRax3GXVdBUDKsyh0c4"
-            comment: ""
-            suggestion: ""
+              email: ''
+            id: '-fhRax3GXVdBUDKsyh0c4'
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-06-03T12:43:30.735Z"
+            time: '2026-06-03T12:43:30.735Z'
   awanturnik20.item.gatunek.pt.rodzaj:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: Yb1IbKZ8dMj8j2AEBC4y3
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-06-03T12:43:42.199Z"
+            time: '2026-06-03T12:43:42.199Z'
   awanturnik20.item.gatunek.modyfikator_cech.wartosc:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: UPIamzeZQnKMS4rIfTSFW
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-06-03T12:44:32.675Z"
+            time: '2026-06-03T12:44:32.675Z'
   awanturnik20.item.gatunek.modyfikator_cech.cecha:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: k3rkI9qtvNh15ESBKWMRO
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-06-03T12:44:46.734Z"
+            time: '2026-06-03T12:44:46.734Z'
   awanturnik20.item.gatunek.pt.label:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: wBElprjcJWodzHvbCpxI2
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-06-03T12:49:43.381Z"
+            time: '2026-06-03T12:49:43.381Z'
   awanturnik20.item.gatunek.kompetencje.label:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: x2hd3XBnCRZqzy9RIyQ3u
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-06-03T12:50:11.491Z"
+            time: '2026-06-03T12:50:11.491Z'
   awanturnik20.item.gatunek.modyfikator_cech.label:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: YDWbJHp_wAbOsuwiGCLDT
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-06-03T12:50:39.331Z"
+            time: '2026-06-03T12:50:39.331Z'
   awanturnik20.item.gatunek.os_wartosci.label:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: Qjx-PYiJZp2djiwfhQ77v
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-06-03T12:52:02.148Z"
+            time: '2026-06-03T12:52:02.148Z'
   awanturnik20.item.gatunek.data:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: 3nRLTbERN_mIlIWvC43Bc
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-06-03T12:52:27.741Z"
+            time: '2026-06-03T12:52:27.741Z'
   awanturnik20.item.gatunek.modyfikator_cech.dodaj:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: yRgHZtj101hzTPDiPRADA
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-06-03T12:53:19.042Z"
+            time: '2026-06-03T12:53:19.042Z'
   awanturnik20.item.gatunek.kompetencje.dodaj:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: J4mRoxMf9vi7Kn75ot3j7
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-06-03T12:53:48.966Z"
+            time: '2026-06-03T12:53:48.966Z'
   awanturnik20.item.gatunek.name_placeholder:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: qf5y652xeiPFamnx5kACQ
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-06-03T12:54:05.901Z"
+            time: '2026-06-03T12:54:05.901Z'
   awanturnik20.ui.warn.ma_gatunek:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: BTURK-1Xk8G2zmsXpHpTG
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-06-08T13:54:55.345Z"
+            time: '2026-06-08T13:54:55.345Z'
   awanturnik20.dialog.ilosc_kompetencji_do_wyboru:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: _Y2cL0Dk32CXkAshMbrqD
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-06-11T12:52:05.689Z"
+            time: '2026-06-11T12:52:05.689Z'
   awanturnik20.dialog.kompetencje_do_wyboru:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: T3_Tn5OLcNPZWVRRnJrGj
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-06-11T13:11:55.887Z"
+            time: '2026-06-11T13:11:55.887Z'
   awanturnik20.dialog.wybor_charakteru:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: FZOC4qo3C2fhl-E8suzI4
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-06-12T09:56:29.686Z"
+            time: '2026-06-12T09:56:29.686Z'
   awanturnik20.dialog.cnoty:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: QhnHyJYcwjL5ucop0G3Uo
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-06-12T09:57:20.512Z"
+            time: '2026-06-12T09:57:20.512Z'
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: 1RUdnBM08WViO3CUh-vwn
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-06-12T09:57:43.921Z"
+            time: '2026-06-12T09:57:43.921Z'
   DCCT.characterCreation.create:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: zT6sbzB_Hj1TAAE6zA247
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-08-17T08:07:44.567Z"
+            time: '2026-08-17T08:07:44.567Z'
   DCCT.characterCreation.next:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: Av8ADDHoSWxR8rRM0cdYX
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-08-17T08:08:09.041Z"
+            time: '2026-08-17T08:08:09.041Z'
   DCCT.characterCreation.previous:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: mjaxUjsMGgw8mmByzGw6e
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-08-17T08:08:26.014Z"
+            time: '2026-08-17T08:08:26.014Z'
   DCCT.characterCreation.weakness:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: iAFEnwwXrGpxD0PFvZ5Y-
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-08-17T08:08:58.724Z"
+            time: '2026-08-17T08:08:58.724Z'
           - user:
               name: Unknown
-              email: ""
-            id: "-X03GmrAXLiWiQHPOpsMa"
-            comment: ""
-            suggestion: ""
+              email: ''
+            id: '-X03GmrAXLiWiQHPOpsMa'
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-08-17T08:10:34.142Z"
+            time: '2026-08-17T08:10:34.142Z'
   DCCT.characterCreation.randomWeakness:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: 3PJ2uO4wL6QX618w2INMb
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-08-17T08:09:20.004Z"
+            time: '2026-08-17T08:09:20.004Z'
   DCCT.characterCreation.summary:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: liXj8MexkcAmsKEUKTqmU
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-08-17T08:09:53.170Z"
+            time: '2026-08-17T08:09:53.170Z'
   DCCT.characterCreation.memento:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: 7YzVkvA9PaV_VwCRgei0D
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-08-17T08:10:52.332Z"
+            time: '2026-08-17T08:10:52.332Z'
   DCCT.characterCreation.gear:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: bqdiMwF3ZKo3JAa-6168j
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-08-17T08:11:09.771Z"
+            time: '2026-08-17T08:11:09.771Z'
   DCCT.characterCreation.skillsProfession:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: MCpSXBkELW0krxmMgR1BD
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-08-17T08:12:14.680Z"
+            time: '2026-08-17T08:12:14.680Z'
   DCCT.characterCreation.attributes:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: T3BRtUB1Z2Y7IXSZkk_8L
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-08-17T08:12:43.566Z"
+            time: '2026-08-17T08:12:43.566Z'
   DCCT.characterCreation.age:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: _ahqFtxc3mCOwu0pIt7I0
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-08-17T08:13:00.964Z"
+            time: '2026-08-17T08:13:00.964Z'
   DCCT.characterCreation.name:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: o6XGaLfRGtp8_4L-4_Z94
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-08-17T08:13:17.451Z"
+            time: '2026-08-17T08:13:17.451Z'
   DCCT.characterCreation.choiceProfession:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: OjulcBCMbW_aZgJXJpV9i
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-08-17T08:13:31.650Z"
+            time: '2026-08-17T08:13:31.650Z'
   DCCT.characterCreation.choiceKin:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: 7oQBys2G-pFLjGQnmfuCq
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-08-17T08:14:03.360Z"
+            time: '2026-08-17T08:14:03.360Z'
   DCCT.characterCreation.swapAttributes:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: AmGuWIwTvIkfBk83rxIiC
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-08-17T08:14:56.984Z"
+            time: '2026-08-17T08:14:56.984Z'
   DCCT.characterCreation.reset:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: JH1XgYRNq8lRdWzkSAwyP
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-08-17T08:15:23.491Z"
+            time: '2026-08-17T08:15:23.491Z'
   DCCT.characterCreation.swap:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: AibqooAGQJgi3I5XRIB7U
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-08-17T08:15:59.764Z"
+            time: '2026-08-17T08:15:59.764Z'
   DCCT.characterCreation.randomGear:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: a5VORYlSrs7W6ZdYG9cr2
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-08-17T08:16:22.234Z"
+            time: '2026-08-17T08:16:22.234Z'
   DCCT.characterCreation.selectGearOption:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: JMyB4G6YSOlgTTgXk3uid
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-08-17T08:16:55.798Z"
+            time: '2026-08-17T08:16:55.798Z'
   DCCT.characterCreation.description:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: ZMBOCf9btWnTEALaYXqaJ
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-08-17T08:17:26.774Z"
+            time: '2026-08-17T08:17:26.774Z'
   DCCT.characterCreation.randomKin:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: ZUWimDY1hoJLnmQckB6eP
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-08-17T08:17:43.447Z"
+            time: '2026-08-17T08:17:43.447Z'
   DCCT.characterCreation.randomMemento:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: H1s72kUGOXGyxMK27eacN
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-08-17T08:18:39.898Z"
+            time: '2026-08-17T08:18:39.898Z'
   DCCT.characterCreation.randomProfession:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: 3k5E9UA_QFXWoRpQIH_oF
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-08-17T08:19:03.054Z"
+            time: '2026-08-17T08:19:03.054Z'
   DCCT.characterCreation.skillsProfessionAll:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: IdsWl7KEd0scCPWkufEZI
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-08-17T08:20:36.800Z"
+            time: '2026-08-17T08:20:36.800Z'
   DCCT.characterCreation.skillsOther:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: YA1MSan45GPNImjLbyLYj
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-08-17T08:20:50.838Z"
+            time: '2026-08-17T08:20:50.838Z'
   DoD.characterCreation.selectTable:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: nEIklg7NOxRl3tUxkkf1o
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-08-17T08:25:29.802Z"
+            time: '2026-08-17T08:25:29.802Z'
   DCCT.characterCreation.tableFound:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: JdLVZE-P0Qi0NLU0Q71IL
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-08-17T08:26:45.795Z"
+            time: '2026-08-17T08:26:45.795Z'
   DCCT.characterCreation.ok:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: DT6iAxLv-4i8z7ExH4gtQ
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-08-17T08:27:01.137Z"
+            time: '2026-08-17T08:27:01.137Z'
   DCCT.characterCreation.cancel:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: 3Nh_Y9zZ5bMA2ocaytcmj
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-08-17T08:27:11.331Z"
+            time: '2026-08-17T08:27:11.331Z'
   DCCT.characterCreation.noTableFound:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: JiuTKuDzgTOxr5Oz7M275
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-08-17T08:28:13.885Z"
+            time: '2026-08-17T08:28:13.885Z'
   DCCT.characterCreation.assigneAttribues:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: xiwP0uAPTxMla_3ngt9ZK
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-08-17T08:29:14.865Z"
+            time: '2026-08-17T08:29:14.865Z'
   DCCT.characterCreation.rolledValue:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: pTxNr6Fp49dghydLyCz8Y
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-08-17T08:29:31.519Z"
+            time: '2026-08-17T08:29:31.519Z'
   DCCT.characterCreation.chooseAttribute:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: ejc5v8CTr1cRSVjsL-ED8
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-08-17T08:29:54.317Z"
+            time: '2026-08-17T08:29:54.317Z'
   DoD.characterCreation.assign:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: IpSIpUoe6050Do-svMl1S
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2026-08-17T08:30:05.913Z"
+            time: '2026-08-17T08:30:05.913Z'
+  DCCT.currency.gold:
+    locales:
+      en:
+        comments:
+          - user:
+              name: Unknown
+              email: ''
+            id: 7CkytY6rmlQA5rdoPCKY0
+            comment: ''
+            suggestion: ''
+            type: approve
+            time: '2026-08-17T22:27:18.763Z'
+      pl:
+        comments:
+          - user:
+              name: Unknown
+              email: ''
+            id: NYR8OplWLD9hXjx7QLoDd
+            comment: ''
+            suggestion: ''
+            type: approve
+            time: '2026-08-17T22:27:20.915Z'
+  DCCT.currency.silver:
+    locales:
+      en:
+        comments:
+          - user:
+              name: Unknown
+              email: ''
+            id: tBOi0YBy4w4JJ3zNYvmDc
+            comment: ''
+            suggestion: ''
+            type: approve
+            time: '2026-08-17T22:27:38.782Z'
+      pl:
+        comments:
+          - user:
+              name: Unknown
+              email: ''
+            id: 09eUs0HC8dO0ldliFdrWI
+            comment: ''
+            suggestion: ''
+            type: approve
+            time: '2026-08-17T22:27:41.346Z'
+  DCCT.currency.copper:
+    locales:
+      en:
+        comments:
+          - user:
+              name: Unknown
+              email: ''
+            id: YWdxamko15UuVsdWH3Q3T
+            comment: ''
+            suggestion: ''
+            type: approve
+            time: '2026-08-17T22:27:54.507Z'
+      pl:
+        comments:
+          - user:
+              name: Unknown
+              email: ''
+            id: f-yq6-REt8ghMmOL1UbSB
+            comment: ''
+            suggestion: ''
+            type: approve
+            time: '2026-08-17T22:27:57.001Z'
+  DCCT.message.flavor:
+    locales:
+      en:
+        comments:
+          - user:
+              name: Unknown
+              email: ''
+            id: a26vDthTrTll4cU_ALycS
+            comment: ''
+            suggestion: ''
+            type: approve
+            time: '2026-08-17T22:50:46.958Z'
+      pl:
+        comments:
+          - user:
+              name: Unknown
+              email: ''
+            id: N9XL2_RWsPrMwvNWUI8Tr
+            comment: ''
+            suggestion: ''
+            type: approve
+            time: '2026-08-17T22:50:48.903Z'
+  DCCT.characterCreation.chooseOption:
+    locales:
+      en:
+        comments:
+          - user:
+              name: Unknown
+              email: ''
+            id: _uyuUG556wX4Bh8-QWoz1
+            comment: ''
+            suggestion: ''
+            type: approve
+            time: '2026-08-17T23:38:48.949Z'
+      pl:
+        comments:
+          - user:
+              name: Unknown
+              email: ''
+            id: FWPnd96qEKO4yHe9tcKoK
+            comment: ''
+            suggestion: ''
+            type: approve
+            time: '2026-08-17T23:38:51.395Z'

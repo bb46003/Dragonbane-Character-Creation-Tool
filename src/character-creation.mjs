@@ -789,15 +789,123 @@ export default class DoDCharacterCreation extends HandlebarsApplicationMixin(
           return selectedMin >= resultMin && selectedMax <= resultMax;
         })
         .map((result) => result.description);
-
-      this._state.selectedGear = descriptions[0];
+      const selectedGear = await this._selectGearOptions(descriptions[0]);
+      if (selectedGear === "") {
+        return;
+      }
+      this._state.selectedGear = selectedGear;
     }
     this._state.activeTab = nextTabName;
     currentTab.classList.remove("active");
     nextTab.classList.add("active");
     this.render();
   }
+  async _selectGearOptions(description) {
+    const localizedOr = game.i18n.localize("DCCT.characterCreation.or").trim();
+    const escapedOr = localizedOr.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    const orRegex = new RegExp(
+      `(@UUID\\[([^\\]]+)\\]\\{([^}]+)\\})\\s+(?:or|${escapedOr})\\s+(@UUID\\[([^\\]]+)\\]\\{([^}]+)\\})`,
+      "gi",
+    );
+    let result = description;
+    const matches = [...description.matchAll(orRegex)];
+    if (matches.length > 0) {
+      for (const match of matches) {
+        const [fullMatch, option1, uuid1, label1, option2, uuid2, label2] =
+          match;
 
+        const TextEditor = foundry.applications.ux.TextEditor.implementation;
+        const option1HTML = await TextEditor.enrichHTML(option1, {
+          async: true,
+        });
+        const option2HTML = await TextEditor.enrichHTML(option2, {
+          async: true,
+        });
+        const content = `
+                <form>
+                    <div class="form-group">
+                        <label>
+                            ${game.i18n.localize("DCCT.characterCreation.chooseOption")}
+                        </label>
+                        <select name="gear-option">
+                            <option value="${uuid1}">
+                                ${option1HTML}
+                            </option>
+                            <option value="${uuid2}">
+                                ${option2HTML}
+                            </option>
+                        </select>
+                    </div>
+                </form>
+            `;
+
+        const selected = await foundry.applications.api.DialogV2.wait({
+          window: {
+            title: game.i18n.localize(
+              "DCCT.characterCreation.selectGearOption",
+            ),
+          },
+          content,
+          buttons: [
+            {
+              action: "ok",
+              label: game.i18n.localize("DCCT.characterCreation.ok"),
+              icon: "fas fa-check",
+              default: true,
+              callback: (event, button) => {
+                return button.form.querySelector('[name="gear-option"]').value;
+              },
+            },
+            {
+              action: "cancel",
+              label: game.i18n.localize("DCCT.characterCreation.cancel"),
+              icon: "fas fa-times",
+            },
+          ],
+        });
+        if (!selected) {
+          return "";
+        }
+        const selectedOption = selected === uuid1 ? option1 : option2;
+        result = result.replace(fullMatch, selectedOption);
+      }
+    }
+    const rollRegex =
+      /\[\[\/(?:roll|r)\s+([^\]]+)\]\](?:\{[^}]+\})?\s*([^,@\[]+)?/gi;
+
+    const rollMatches = [...result.matchAll(rollRegex)];
+
+    for (const match of rollMatches) {
+      const [fullMatch, formula, textAfterRoll] = match;
+      const roll = await new Roll(formula.trim()).evaluate();
+      let flavor = textAfterRoll?.trim().replace(/^x\s*/, "") ?? "";
+      let uuidMatch = "";
+      if (!flavor) {
+        uuidMatch = result
+          .slice(match.index + fullMatch.length)
+          .match(/^\s*@UUID\[[^\]]+\]\{([^}]+)\}/i);
+
+        if (uuidMatch) {
+          flavor = uuidMatch[1].trim();
+        } else {
+          uuidMatch = "";
+        }
+      }
+
+      await roll.toMessage({
+        flavor: game.i18n.format("DCCT.message.flavor", {
+          flavor,
+        }),
+      });
+      if (uuidMatch === "") {
+        result = result.replace(fullMatch, roll.total + " " + flavor);
+      } else {
+        result = result.replace(fullMatch, roll.total);
+      }
+    }
+
+    return result;
+  }
   static #resetAttributes(ev) {
     this._state.attributes = {
       str: 0,
@@ -917,9 +1025,8 @@ export default class DoDCharacterCreation extends HandlebarsApplicationMixin(
     const kin = kins[this._state.selectedKinIndex];
     data.professionUuid = professions[this._state.selectedProfessionIndex].uuid;
     data.kinUuid = kin.uuid;
-    //data.ger = await this._prepareGear()
     if (canCreatActor) {
-      const actor = new createActor(user._id, data);
+      const actor = new CreateActor(user._id, data);
       await actor.create();
     } else {
       game.modules
@@ -932,10 +1039,4 @@ export default class DoDCharacterCreation extends HandlebarsApplicationMixin(
     }
     this.close();
   }
-
-
-async _prepareGear(){
-   const gear =  this._state.selectedGear.split(",");
-
-}
 }
