@@ -1,9 +1,9 @@
 <section   class="tab gear {{tabs.gear.cssClass}}"  action-data="tab"  data-tab="gear">    
     <div class="block">
         <label>
-            {{localize "DoD.characterCreation.gear"}}
+            {{localize "DCCT.characterCreation.gear"}}
             {{#if (ne gearTable "")}}
-                <a data-tooltip="{{localize "DoD.characterCreation.randomGear"}}" 
+                <a data-tooltip="{{localize "DCCT.characterCreation.randomGear"}}" 
                     class="fa-solid fa-dice-d20" 
                     data-action="rollTable" 
                     data-type="gear" 
@@ -17,7 +17,7 @@
              {{{gearTableHTML}}}
         </p>
         <div>
-        <label>{{localize "DoD.characterCreation.selectGearOption"}}</label>
+        <label>{{localize "DCCT.characterCreation.selectGearOption"}}</label>
         <select class="selected-ger">
             {{#each gearOption as |option|}}
                 <option value="{{option}}" {{#if (eq ../_state.gear option)}}selected{{/if}}>{{option}}</option>
