@@ -1,68 +1,68 @@
-.character-creation{
-    overflow: auto !important;
-    .character-creation-button{
-        min-height: 40px;
-    }
-    .skill-list{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        align-items: center;
-        justify-items: center;
-        .flexrow{
-            grid-template-columns: 100px 20px;
-            display: grid;
-            align-items: center;
-        }
-    }
-    .other-skills, .profession-skills{
-        border: 1px solid black;
-        border-radius: 5px;
-    }
-    .skills{
-        label{
-            max-width: 120px;
-        }
-    }
-    prose-mirror{
-        border: 1px solid black;
-        border-radius: 5px;
-        min-height: 350px;
-    }
-    .age{
-        .form-group{
-
-                    margin-bottom: 20px;
-            display: flex;
-            flex-direction: column;
-        label.flexrow{
-                display: flex;
+.character-creation {
+  overflow: auto !important;
+  .character-creation-button {
+    min-height: 40px;
+  }
+  .skill-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
-    gap: 10px;
-        }
-        select{
-                text-align: center;
-    min-height: 35px;
-    width: 130px;
-        }
+    justify-items: center;
+    .flexrow {
+      grid-template-columns: 100px 20px;
+      display: grid;
+      align-items: center;
     }
+  }
+  .other-skills,
+  .profession-skills {
+    border: 1px solid black;
+    border-radius: 5px;
+  }
+  .skills {
+    label {
+      max-width: 120px;
     }
-    .attributes{
-    .attribute-swap{
+  }
+  prose-mirror {
+    border: 1px solid black;
+    border-radius: 5px;
+    min-height: 350px;
+  }
+  .age {
+    .form-group {
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      label.flexrow {
         display: flex;
-    flex-direction: column;
-    select{
-            text-align: center;
-    max-width: 120px;
-    min-height: 30px;
+        align-items: center;
+        gap: 10px;
+      }
+      select {
+        text-align: center;
+        min-height: 35px;
+        width: 130px;
+      }
     }
+  }
+  .attributes {
+    .attribute-swap {
+      display: flex;
+      flex-direction: column;
+      select {
+        text-align: center;
+        max-width: 120px;
+        min-height: 30px;
+      }
     }
-    .button{
-        min-width: 100%;
+    .button {
+      min-width: 100%;
     }
-}
-.summary{
-    .bold{
-        font-weight: bold;
+  }
+  .summary {
+    .bold {
+      font-weight: bold;
     }
-}
+  }
 }

@@ -1,23 +1,30 @@
-<section   class="tab weakness {{tabs.weakness.cssClass}}"  action-data="tab"  data-tab="weakness">    
-    <div class="block">
-        <label>
-            {{localize "DCCT.characterCreation.weakness"}}
-            {{#if (ne weaknessTable "")}}
-            <a data-tooltip="{{localize "DCCT.characterCreation.randomWeakness"}}" 
-                class="fa-solid fa-dice-d20" 
-                data-action="rollTable" 
-                data-type="weakness" 
-                data-uuid="{{weaknessTable}}"> 
-            </a>
-            {{/if}}s
-        </label>
-        <prose-mirror
-                name="weakness"
-                value="{{_state.weakness}}"
-                button="true"
-                editable="{{editable}}"
-                toggled="false">
-            {{{weaknessHTML}}}
-        </prose-mirror>
-    </div>
+<section
+  class="tab weakness {{tabs.weakness.cssClass}}"
+  action-data="tab"
+  data-tab="weakness"
+>
+  <div class="block">
+    <label>
+      {{localize "DCCT.characterCreation.weakness"}}
+      {{#if (ne weaknessTable "")}}
+        <a
+          data-tooltip="{{localize 'DCCT.characterCreation.randomWeakness'}}"
+          class="fa-solid fa-dice-d20"
+          data-action="rollTable"
+          data-type="weakness"
+          data-uuid="{{weaknessTable}}"
+        >
+        </a>
+      {{/if}}s
+    </label>
+    <prose-mirror
+      name="weakness"
+      value="{{_state.weakness}}"
+      button="true"
+      editable="{{editable}}"
+      toggled="false"
+    >
+      {{{weaknessHTML}}}
+    </prose-mirror>
+  </div>
 </section>

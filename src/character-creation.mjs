@@ -1,5 +1,5 @@
+import CreateActor from "./actor-creation.mjs";
 import DoD_Utility from "/systems/dragonbane/modules/utility.js";
-
 
 const { HandlebarsApplicationMixin } = foundry.applications.api;
 const { ApplicationV2 } = foundry.applications.api;
@@ -13,7 +13,8 @@ export default class DoDCharacterCreation extends HandlebarsApplicationMixin(
     this._state = {
       selectedKinIndex: 0,
       selectedProfessionIndex: 0,
-      kin: "",
+      professionUuid: "",
+      kinUuid: "",
       name: "",
       age: "",
       attributes: {
@@ -47,18 +48,23 @@ export default class DoDCharacterCreation extends HandlebarsApplicationMixin(
     tag: "form",
     window: {
       title: "DCCT.characterCreator",
-      contentClasses: ["system-dragonbane", "standard-form", "overflow", "character-creation"],
+      contentClasses: [
+        "system-dragonbane",
+        "standard-form",
+        "overflow",
+        "character-creation",
+      ],
       resizable: false,
       icon: "fa-solid fa-gears",
     },
     position: {
       width: 550,
-      height: 700
+      height: 700,
     },
-            form: {
-            submitOnChange: true,
-            closeOnSubmit: false
-        },
+    form: {
+      submitOnChange: false,
+      closeOnSubmit: false,
+    },
     actions: {
       random: DoDCharacterCreation.#rollRandom,
       changeTab: DoDCharacterCreation.#changeTab,
@@ -66,8 +72,8 @@ export default class DoDCharacterCreation extends HandlebarsApplicationMixin(
       resetAttributes: DoDCharacterCreation.#resetAttributes,
       rollAttributes: DoDCharacterCreation.#rollAttributes,
       swapValues: DoDCharacterCreation.#swapValues,
+      createActor: DoDCharacterCreation.#createActor,
     },
-
   };
 
   static PARTS = {
@@ -103,14 +109,14 @@ export default class DoDCharacterCreation extends HandlebarsApplicationMixin(
       template:
         "modules/dragonbane-character-creation-tool/character-creation/character-creation-gear.hbs",
     },
-    memento:{
+    memento: {
       template:
         "modules/dragonbane-character-creation-tool/character-creation/character-creation-memento.hbs",
     },
-    summary:{
+    summary: {
       template:
         "modules/dragonbane-character-creation-tool/character-creation/character-creation-summary.hbs",
-    }
+    },
   };
   static TABS = {
     items: {
@@ -123,7 +129,7 @@ export default class DoDCharacterCreation extends HandlebarsApplicationMixin(
         { id: "weakness" },
         { id: "gear" },
         { id: "memento" },
-        { id: "summary" }
+        { id: "summary" },
       ],
     },
   };
@@ -139,7 +145,8 @@ export default class DoDCharacterCreation extends HandlebarsApplicationMixin(
     context.numbersOfKins = context.kin.length;
     context.numbersOfProfession = context.profession.length;
     context.selectedKin = context.kin[this._state.selectedKinIndex];
-    context.selectedProfession = context.profession[this._state.selectedProfessionIndex];
+    context.selectedProfession =
+      context.profession[this._state.selectedProfessionIndex];
     context._state = this._state;
     context.tabs[this._state.activeTab].cssClass = "active";
     context.config = CONFIG.DoD;
@@ -149,33 +156,37 @@ export default class DoDCharacterCreation extends HandlebarsApplicationMixin(
     context.skills = await this._prepareSkills(context.profession);
     context.weaknessTable = await this._prepareWeaknessTable();
     context.weaknessHTML = await this.enrich(this._state.weakness);
-    context.gearTable = await this._prepareGearTable()
-    context.gearTableHTML = await this.enrich("@DisplayTable["+context.gearTable+"]")
-    if(context.gearTable){
-      context.gearOption = await this._prepareGearOption(context.gearTable)
+    context.gearTable = await this._prepareGearTable();
+    context.gearTableHTML = await this.enrich(
+      "@DisplayTable[" + context.gearTable + "]",
+    );
+    if (context.gearTable) {
+      context.gearOption = await this._prepareGearOption(context.gearTable);
     }
     context.mementoTable = await this._prepareMementosTable();
-    if(this._state.memento === ""){
-      context.mementoHTML = ""
-    }else{
-      context.mementoHTML = await this.enrich("@UUID["+this._state.memento + "]");
-      context.mementoName = await this._getMementoName(this._state.memento)
+    if (this._state.memento === "") {
+      context.mementoHTML = "";
+    } else {
+      context.mementoHTML = await this.enrich(
+        "@UUID[" + this._state.memento + "]",
+      );
+      context.mementoName = await this._getMementoName(this._state.memento);
     }
-    if(this._state.selectedGear !== ""){
-      context.gearName = await this._prepareGearName(this._state.selectedGear)
+    if (this._state.selectedGear !== "") {
+      context.gearName = await this._prepareGearName(this._state.selectedGear);
     }
     return context;
   }
-    async enrich(html) {
-        if (html) {
-            return await CONFIG.DoD.TextEditor.enrichHTML(html, {
-                relativeTo: this.document,
-                async: true
-            });
-        } else {
-            return html;
-        }
+  async enrich(html) {
+    if (html) {
+      return await CONFIG.DoD.TextEditor.enrichHTML(html, {
+        relativeTo: this.document,
+        async: true,
+      });
+    } else {
+      return html;
     }
+  }
   // =========================
   // DATA PREPARATION
   // =========================
@@ -185,6 +196,7 @@ export default class DoDCharacterCreation extends HandlebarsApplicationMixin(
 
     const kin = items.map(async (item) => ({
       name: item.name,
+      uuid: item.uuid,
       description: await CONFIG.DoD.TextEditor.enrichHTML(
         item.system.itemDescription,
         { async: true, secrets: false },
@@ -201,11 +213,16 @@ export default class DoDCharacterCreation extends HandlebarsApplicationMixin(
 
     const profession = items.map(async (item) => ({
       name: item.name,
+      uuid: item.uuid,
       description: await CONFIG.DoD.TextEditor.enrichHTML(
         item.system.itemDescription,
         { async: true, secrets: false },
       ),
-      skills: item.system?.skills.split(",") ?? [],
+      skills:
+        item.system?.skills
+          ?.split(",")
+          .map((skill) => skill.trim())
+          .filter(Boolean) ?? [],
       keyAtr: item.system?.attribute?.toUpperCase() ?? "",
       abilities: await this._getAbility(item.system?.abilities),
     }));
@@ -230,7 +247,9 @@ export default class DoDCharacterCreation extends HandlebarsApplicationMixin(
 
   async _prepareSkills(professionList) {
     const allSkills = game.items
-      .filter((item) => item.type === "skill" && item.system.skillType !== "magic")
+      .filter(
+        (item) => item.type === "skill" && item.system.skillType !== "magic",
+      )
       .map((item) => item.name);
     const selectedProfession =
       professionList[this._state.selectedProfessionIndex];
@@ -238,7 +257,7 @@ export default class DoDCharacterCreation extends HandlebarsApplicationMixin(
 
     const professionSkills = selectedProfession.skills ?? [];
 
-    return {availableSkills:allSkills, professionSkills:professionSkills};
+    return { availableSkills: allSkills, professionSkills: professionSkills };
   }
   async getAgeTable() {
     const age = ["Age", game.i18n.localize("DoD.ui.character-sheet.age")];
@@ -255,210 +274,206 @@ export default class DoDCharacterCreation extends HandlebarsApplicationMixin(
     );
   }
   async _prepareWeaknessTable() {
-const weakness = [
-    "Weakness",
-    game.i18n.localize("DoD.ui.character-sheet.weakness")
-];
-
-const weaknessTable = game.tables.filter(table =>
-    weakness.some(word =>
-        table.name.slice(0, 7).toLowerCase() === word.slice(0, 7).toLowerCase()
-    )
-);
-if (weaknessTable.length > 0) {
-    const table = weaknessTable[0];
-    return table.uuid;
-}else{
-  return ""
-}
-
-  }
-async _prepareGearTable() {
-    const allProfession = await this._prepareProfession();
-
-    const gear = [
-        game.i18n.localize("DoD.ui.character-sheet.gear"),
-        "gear"
+    const weakness = [
+      "Weakness",
+      game.i18n.localize("DoD.ui.character-sheet.weakness"),
     ];
 
+    const weaknessTable = game.tables.filter((table) =>
+      weakness.some(
+        (word) =>
+          table.name.slice(0, 7).toLowerCase() ===
+          word.slice(0, 7).toLowerCase(),
+      ),
+    );
+    if (weaknessTable.length > 0) {
+      const table = weaknessTable[0];
+      return table.uuid;
+    } else {
+      return "";
+    }
+  }
+  async _prepareGearTable() {
+    const allProfession = await this._prepareProfession();
+
+    const gear = [game.i18n.localize("DoD.ui.character-sheet.gear"), "gear"];
+
     const profession = allProfession[this._state.selectedProfessionIndex];
-    const gearTable = game.tables.filter(table => {
-        const tableName = table.name.toLowerCase();
-        const professionMatch = tableName.includes(
-            profession.name.toLowerCase()
-        );
-        const gearMatch = gear.some(word =>
-            tableName.startsWith(word.slice(0, 5).toLowerCase())
-        );
-        return professionMatch && gearMatch;
+    const gearTable = game.tables.filter((table) => {
+      const tableName = table.name.toLowerCase();
+      const professionMatch = tableName.includes(profession.name.toLowerCase());
+      const gearMatch = gear.some((word) =>
+        tableName.startsWith(word.slice(0, 5).toLowerCase()),
+      );
+      return professionMatch && gearMatch;
     });
     if (gearTable.length > 0) {
-        return gearTable[0].uuid;
+      return gearTable[0].uuid;
     }
     return "";
-}
-async _prepareGearOption(uuid) {
+  }
+  async _prepareGearOption(uuid) {
     const gearTable = await fromUuid(uuid);
     const options = [];
     for (const result of gearTable.results) {
-        const range = result.range.join("-");
-        options.push(`${range}`);
+      const range = result.range.join("-");
+      options.push(`${range}`);
     }
     return options;
-}
+  }
   async _prepareMementosTable() {
-const weakness = [
-    "Memento",
-    game.i18n.localize("DoD.ui.character-sheet.memento")
-];
+    const weakness = [
+      "Memento",
+      game.i18n.localize("DoD.ui.character-sheet.memento"),
+    ];
 
-const weaknessTable = game.tables.filter(table =>
-    weakness.some(word =>
-        table.name.slice(0, 7).toLowerCase() === word.slice(0, 7).toLowerCase()
-    )
-);
-if (weaknessTable.length > 0) {
-    const table = weaknessTable[0];
-    return table.uuid;
-}else{
-  return ""
-}
-  }
-  async _getMementoName(uuid){
-    const memento = await fromUuid(uuid)
-    return memento.name
-  }
-  async _prepareGearName(selectedGear){
-    const names = [...selectedGear.matchAll(/@UUID\[[^\]]+\]\{([^}]*)\}/g)]
-  .map(match => match[1]);
-  return names
-  }
-async _onRender(context, options) {
-  await super._onRender(context, options);
-
-  const element = this.element;
-
-  const kinSelect = element.querySelector('select[name="kin"]');
-  const professionSelect = element.querySelector('select[name="profession"]');
-
-  kinSelect?.addEventListener("change", this._onKinChange.bind(this));
-  professionSelect?.addEventListener("change", this._onProfessionChange.bind(this));
-
-  const selects = element.querySelectorAll('select[data-action="swap"]');
-
-  selects.forEach((select) => {
-    select.addEventListener("change", () => {
-      this._updateSwapOptions(selects);
-    });
-  });
-
-  this._updateSwapOptions(selects);
-
-const professionSkillsElement = element.querySelector(".profession-skills");
-const otherSkillsElement = element.querySelector(".other-skills");
-
-if (professionSkillsElement && otherSkillsElement) {
-
-  const getInputs = (container) =>
-    [...container.querySelectorAll('input[type="checkbox"]')];
-
-  const getSkill = (input) =>
-    input.closest('[data-name]')?.dataset.name?.trim();
-
-  const updateSkills = () => {
-    const professionSkills = getInputs(professionSkillsElement);
-    const otherSkills = getInputs(otherSkillsElement);
-
-    const selectedProfessionSkills = new Set(
-      professionSkills.filter(i => i.checked).map(getSkill)
+    const weaknessTable = game.tables.filter((table) =>
+      weakness.some(
+        (word) =>
+          table.name.slice(0, 7).toLowerCase() ===
+          word.slice(0, 7).toLowerCase(),
+      ),
     );
-
-    const selectedOtherSkills = new Set(
-      otherSkills.filter(i => i.checked).map(getSkill)
-    );
-
-    const maxProfessionSkills = 6;
-    const maxOtherSkills = this._state.numberOfSelectedSkills;
-
-    const numberOfProfessionSkills = selectedProfessionSkills.size;
-    const numberOfOtherSkills = selectedOtherSkills.size;
-
-  
-    professionSkills.forEach(input => {
-      const skill = getSkill(input);
-
-      input.disabled =
-        (!input.checked && numberOfProfessionSkills >= maxProfessionSkills) ||
-        (!input.checked && selectedOtherSkills.has(skill));
-    });
-
-    otherSkills.forEach(input => {
-      const skill = getSkill(input);
-      input.disabled =
-        (!input.checked && numberOfOtherSkills >= maxOtherSkills) ||
-        (!input.checked && selectedProfessionSkills.has(skill));
-    });
-  };
-
-
-  const allCheckboxes = [
-    ...getInputs(professionSkillsElement),
-    ...getInputs(otherSkillsElement),
-  ];
-
-  allCheckboxes.forEach(input => {
-    input.addEventListener("change", updateSkills);
-  });
-
-
-  updateSkills();
-}
-
-
-  const inputName = element.querySelector('input[name="name"]');
-  inputName?.addEventListener("input", (event) => {
-    const nextButton = element.querySelector('button[data-type="1"]');
-    if (nextButton) {
-      nextButton.disabled = event.target.value.trim() === "";
+    if (weaknessTable.length > 0) {
+      const table = weaknessTable[0];
+      return table.uuid;
+    } else {
+      return "";
     }
-  });
-element.addEventListener('save', async (event) => { 
-  const target = event.target
-  this._state[target.name] = target.value
-  this.render()
-})
-}
-_updateSwapOptions(selects) {
-  const selectArray = Array.from(selects);
-  const usedValues = new Set();
-  selectArray.forEach((select) => {
-    if (usedValues.has(select.value)) {
-      const newOption = Array.from(select.options).find(
-        (option) => !usedValues.has(option.value)
+  }
+  async _getMementoName(uuid) {
+    const memento = await fromUuid(uuid);
+    return memento.name;
+  }
+  async _prepareGearName(selectedGear) {
+    const names = [...selectedGear.matchAll(/@UUID\[[^\]]+\]\{([^}]*)\}/g)].map(
+      (match) => match[1],
+    );
+    return names;
+  }
+  async _onRender(context, options) {
+    await super._onRender(context, options);
+
+    const element = this.element;
+
+    const kinSelect = element.querySelector('select[name="kin"]');
+    const professionSelect = element.querySelector('select[name="profession"]');
+
+    kinSelect?.addEventListener("change", this._onKinChange.bind(this));
+    professionSelect?.addEventListener(
+      "change",
+      this._onProfessionChange.bind(this),
+    );
+
+    const selects = element.querySelectorAll('select[data-action="swap"]');
+
+    selects.forEach((select) => {
+      select.addEventListener("change", () => {
+        this._updateSwapOptions(selects);
+      });
+    });
+
+    this._updateSwapOptions(selects);
+
+    const professionSkillsElement = element.querySelector(".profession-skills");
+    const otherSkillsElement = element.querySelector(".other-skills");
+
+    if (professionSkillsElement && otherSkillsElement) {
+      const getInputs = (container) => [
+        ...container.querySelectorAll('input[type="checkbox"]'),
+      ];
+
+      const getSkill = (input) =>
+        input.closest("[data-name]")?.dataset.name?.trim();
+
+      const updateSkills = () => {
+        const professionSkills = getInputs(professionSkillsElement);
+        const otherSkills = getInputs(otherSkillsElement);
+
+        const selectedProfessionSkills = new Set(
+          professionSkills.filter((i) => i.checked).map(getSkill),
+        );
+
+        const selectedOtherSkills = new Set(
+          otherSkills.filter((i) => i.checked).map(getSkill),
+        );
+
+        const maxProfessionSkills = 6;
+        const maxOtherSkills = this._state.numberOfSelectedSkills;
+
+        const numberOfProfessionSkills = selectedProfessionSkills.size;
+        const numberOfOtherSkills = selectedOtherSkills.size;
+
+        professionSkills.forEach((input) => {
+          const skill = getSkill(input);
+
+          input.disabled =
+            (!input.checked &&
+              numberOfProfessionSkills >= maxProfessionSkills) ||
+            (!input.checked && selectedOtherSkills.has(skill));
+        });
+
+        otherSkills.forEach((input) => {
+          const skill = getSkill(input);
+          input.disabled =
+            (!input.checked && numberOfOtherSkills >= maxOtherSkills) ||
+            (!input.checked && selectedProfessionSkills.has(skill));
+        });
+      };
+
+      const allCheckboxes = [
+        ...getInputs(professionSkillsElement),
+        ...getInputs(otherSkillsElement),
+      ];
+
+      allCheckboxes.forEach((input) => {
+        input.addEventListener("change", updateSkills);
+      });
+
+      updateSkills();
+    }
+
+    const inputName = element.querySelector('input[name="name"]');
+    inputName?.addEventListener("input", (event) => {
+      const nextButton = element.querySelector('button[data-type="1"]');
+      if (nextButton) {
+        nextButton.disabled = event.target.value.trim() === "";
+      }
+    });
+    element.addEventListener("save", async (event) => {
+      const target = event.target;
+      this._state[target.name] = target.value;
+      this.render();
+    });
+  }
+  _updateSwapOptions(selects) {
+    const selectArray = Array.from(selects);
+    const usedValues = new Set();
+    selectArray.forEach((select) => {
+      if (usedValues.has(select.value)) {
+        const newOption = Array.from(select.options).find(
+          (option) => !usedValues.has(option.value),
+        );
+
+        if (newOption) {
+          select.value = newOption.value;
+        }
+      }
+
+      usedValues.add(select.value);
+    });
+    selectArray.forEach((select) => {
+      const otherSelectedValues = new Set(
+        selectArray
+          .filter((otherSelect) => otherSelect !== select)
+          .map((otherSelect) => otherSelect.value),
       );
 
-      if (newOption) {
-        select.value = newOption.value;
-      }
-    }
-
-    usedValues.add(select.value);
-  });
-  selectArray.forEach((select) => {
-    const otherSelectedValues = new Set(
-      selectArray
-        .filter((otherSelect) => otherSelect !== select)
-        .map((otherSelect) => otherSelect.value)
-    );
-
-    Array.from(select.options).forEach((option) => {
-      option.disabled = otherSelectedValues.has(option.value);
+      Array.from(select.options).forEach((option) => {
+        option.disabled = otherSelectedValues.has(option.value);
+      });
     });
-  });
-
-  
-}
-
+  }
 
   _onKinChange(event) {
     const index = Number(event.target.value);
@@ -518,7 +533,7 @@ _updateSwapOptions(selects) {
       );
       table = await this.selectTable(ageTables, "Age");
     }
-    if(type === "weakness" || type === "gear" || type === "memento"){
+    if (type === "weakness" || type === "gear" || type === "memento") {
       const uuid = target.dataset.uuid;
       table = await fromUuid(uuid);
     }
@@ -545,7 +560,7 @@ _updateSwapOptions(selects) {
             break;
           case game.i18n.localize("DoD.ageTypes.adult").toLowerCase():
             rolledAge = "adult";
-            this._state.numberOfSelectedSkills = 4; 
+            this._state.numberOfSelectedSkills = 4;
             break;
           case game.i18n.localize("DoD.ageTypes.old").toLowerCase():
             rolledAge = "old";
@@ -564,7 +579,6 @@ _updateSwapOptions(selects) {
         const gear = result.results[0].range.join("-");
         this._state.gear = gear;
         break;
-
     }
 
     this.render({ force: true });
@@ -573,7 +587,7 @@ _updateSwapOptions(selects) {
   async selectTable(tables, targetName) {
     let selectedTable = null;
 
-    if (tables.length > 0) {
+    if (tables.length === 1) {
       const result = await foundry.applications.api.DialogV2.wait({
         window: {
           title: game.i18n.localize("DCCT.characterCreation.selectTable"),
@@ -606,15 +620,26 @@ _updateSwapOptions(selects) {
         selectedTable = tables[0];
       }
     } else {
-      const options = game.tables.contents
-        .map(
-          (table) =>
-            `<option value="${table.id}">
+      let options;
+      if (tables.length === 0) {
+        options = game.tables.contents
+          .map(
+            (table) =>
+              `<option value="${table.id}">
                 ${table.name}
             </option>`,
-        )
-        .join("");
-
+          )
+          .join("");
+      } else {
+        options = tables
+          .map(
+            (table) =>
+              `<option value="${table.id}">
+                ${table.name}
+            </option>`,
+          )
+          .join("");
+      }
       const result = await foundry.applications.api.DialogV2.wait({
         window: {
           title: game.i18n.localize("DCCT.characterCreation.selectTable"),
@@ -682,9 +707,12 @@ _updateSwapOptions(selects) {
     let nextTabName = tabs[nextIndex];
     const isGerTable = await this._prepareGearTable();
     const isMementTable = await this._prepareMementosTable();
-    if((nextTabName === "gear" && isGerTable === "") || (nextTabName === "memento" && isMementTable === "")){
-      nextIndex = index + 2*direction;
-      nextTabName = tabs[nextIndex]
+    if (
+      (nextTabName === "gear" && isGerTable === "") ||
+      (nextTabName === "memento" && isMementTable === "")
+    ) {
+      nextIndex = index + 2 * direction;
+      nextTabName = tabs[nextIndex];
     }
     const nextTab = app.form.querySelector(`.tab[data-tab="${nextTabName}"]`);
     const previousButton = app.form.querySelector('button[data-type="-1"]');
@@ -698,80 +726,76 @@ _updateSwapOptions(selects) {
     if (nextTabName === "age" && this._state.name.trim() === "") {
       const nextButton = app.form.querySelector('button[data-type="1"]');
       nextButton.disabled = true;
-    }
-    else{
+    } else {
       const nextButton = app.form.querySelector('button[data-type="1"]');
-      if(nextButton){
+      if (nextButton) {
         nextButton.disabled = false;
       }
     }
 
-    if(currentTabName === "age"){
+    if (currentTabName === "age") {
       const element = target.offsetParent;
       const ageSelect = element.querySelector('select[name="age"]');
       const value = ageSelect.value;
       let selectedAge = "";
       let numberOfSelectedSkills = 4;
-       switch (value.toLowerCase()) {
-          case "young":
-            selectedAge = "young";
-            numberOfSelectedSkills = 2;
-            break;
-          case "adult":
-            selectedAge = "adult";
-            numberOfSelectedSkills = 4;
-            break;
-          case "old":
-            selectedAge = "old";
-            numberOfSelectedSkills = 6;
-            break;
+      switch (value.toLowerCase()) {
+        case "young":
+          selectedAge = "young";
+          numberOfSelectedSkills = 2;
+          break;
+        case "adult":
+          selectedAge = "adult";
+          numberOfSelectedSkills = 4;
+          break;
+        case "old":
+          selectedAge = "old";
+          numberOfSelectedSkills = 6;
+          break;
+      }
+      this._state.age = selectedAge;
+      this._state.numberOfSelectedSkills = numberOfSelectedSkills;
+    }
+    if (currentTabName === "skills") {
+      const selectedSkills = currentTab.querySelectorAll(
+        "input[type=checkbox]",
+      );
+
+      selectedSkills.forEach((checkbox) => {
+        if (checkbox.checked) {
+          const flexcol = checkbox.closest("div.flexrow");
+
+          if (flexcol) {
+            const skillName = flexcol.dataset.name; // if name is stored as data-name
+            this._state.selectedSkills.push(skillName);
+          }
         }
-         this._state.age = selectedAge;
-         this._state.numberOfSelectedSkills = numberOfSelectedSkills;
+      });
     }
-    if(currentTabName === "skills"){
-const selectedSkills = currentTab.querySelectorAll("input[type=checkbox]");
+    if (currentTabName === "gear") {
+      const gearTableUuid = await this._prepareGearTable();
+      const gearTable = await fromUuid(gearTableUuid);
 
-selectedSkills.forEach((checkbox) => {
-  if (checkbox.checked) {
-    const flexcol = checkbox.closest("div.flexrow");
+      let selectedRange = this._state.gear;
+      if (selectedRange === "") {
+        selectedRange = currentTab.querySelector(".selected-ger").value;
+      }
+      const [selectedMin, selectedMax] = selectedRange.split("-").map(Number);
 
-    if (flexcol) {
-      const skillName = flexcol.dataset.name; // if name is stored as data-name
-      this._state.selectedSkills.push(skillName);
-    }
-  }
-});
-    }
-if (currentTabName === "gear") {
-    const gearTableUuid = await this._prepareGearTable();
-    const gearTable = await fromUuid(gearTableUuid);
+      const descriptions = gearTable.results
+        .filter((result) => {
+          const [resultMin, resultMax] = result.range;
 
-    let selectedRange = this._state.gear;
-    if(selectedRange === ""){
-        selectedRange = currentTab.querySelector(".selected-ger").value
-    }
-    const [selectedMin, selectedMax] = selectedRange
-        .split("-")
-        .map(Number);
-
-    const descriptions = gearTable.results
-        .filter(result => {
-            const [resultMin, resultMax] = result.range;
-
-            return (
-                selectedMin >= resultMin &&
-                selectedMax <= resultMax
-            );
+          return selectedMin >= resultMin && selectedMax <= resultMax;
         })
-        .map(result => result.description);
+        .map((result) => result.description);
 
-    this._state.selectedGear = descriptions[0];
-}
+      this._state.selectedGear = descriptions[0];
+    }
     this._state.activeTab = nextTabName;
     currentTab.classList.remove("active");
     nextTab.classList.add("active");
-    this.render()
+    this.render();
   }
 
   static #resetAttributes(ev) {
@@ -863,7 +887,6 @@ if (currentTabName === "gear") {
         },
       ],
     }).render(true);
-    
   }
   static #swapValues(ev) {
     const target = ev.target;
@@ -885,5 +908,34 @@ if (currentTabName === "gear") {
     this.render({ force: true });
   }
 
+  static async #createActor() {
+    const user = game.user;
+    const canCreatActor = user.can("ACTOR_CREATE");
+    const data = this._state;
+    const kins = await this._prepareKin();
+    const professions = await this._prepareProfession();
+    const kin = kins[this._state.selectedKinIndex];
+    data.professionUuid = professions[this._state.selectedProfessionIndex].uuid;
+    data.kinUuid = kin.uuid;
+    //data.ger = await this._prepareGear()
+    if (canCreatActor) {
+      const actor = new createActor(user._id, data);
+      await actor.create();
+    } else {
+      game.modules
+        .get("dragonbane-character-creation-tool")
+        .socketHandler.emit({
+          type: "creatActor",
+          userId: user.id,
+          dataset: data,
+        });
+    }
+    this.close();
+  }
 
+
+async _prepareGear(){
+   const gear =  this._state.selectedGear.split(",");
+
+}
 }
