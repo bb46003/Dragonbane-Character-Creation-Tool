@@ -41,5 +41,7 @@
   "socket": true,
   "description": "",
   "url": "Filled in by the release workflow",
-  "download": "Filled in by the release workflow"
+  "download": "Filled in by the release workflow",
+  "manifest": "Filled in by the release workflow"
+
 }
