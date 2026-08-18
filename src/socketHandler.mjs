@@ -14,6 +14,17 @@ export class SocketHandler {
             await actor.create();
           }
           break;
+        case "actorCreated":
+          const user = data.userId;
+          if (game.user.id === user) {
+            const proceed = await foundry.applications.api.DialogV2.prompt({
+              content: game.i18n.format("DCCT.yourCharacterIsCreated", {
+                name: data.name,
+              }),
+              rejectClose: false,
+              modal: true,
+            });
+          }
       }
     });
   }

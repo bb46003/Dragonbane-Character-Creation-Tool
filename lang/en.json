@@ -46,6 +46,7 @@
     },
     "message": {
       "flavor": "Roll for {flavor}"
-    }
+    },
+    "yourCharacterIsCreated": "Your character <strong>{name}</Strong> was created"
   }
 }

@@ -10,6 +10,12 @@ export default class CreateActor {
     let attributes = this.data.attributes;
     const age = this.data.age;
     const userId = this.user_id;
+    const skills = this.data.selectedSkills;
+    const gear = this.data.selectedGear;
+    const kinUuid = this.data.kinUuid;
+    const professionUuid = this.data.professionUuid;
+    const weakness = this.data.weakness;
+    const memento = this.data.memento;
 
     const allSet = Object.values(attributes).every((value) => value !== 0);
 
@@ -36,37 +42,69 @@ export default class CreateActor {
         base: 10,
         max: 10,
       },
+      age: age,
     };
+    const modifiers = {
+      young: {
+        ["system.attributes.str.value"]: 0,
+        ["system.attributes.con.value"]: 1,
+        ["system.attributes.agl.value"]: 1,
+        ["system.attributes.int.value"]: 0,
+        ["system.attributes.wil.value"]: 0,
+        ["system.attributes.cha.value"]: 0,
+      },
+      adult: {
+        ["system.attributes.str.value"]: 0,
+        ["system.attributes.con.value"]: 0,
+        ["system.attributes.agl.value"]: 0,
+        ["system.attributes.int.value"]: 0,
+        ["system.attributes.wil.value"]: 0,
+        ["system.attributes.cha.value"]: 0,
+      },
+      old: {
+        ["system.attributes.str.value"]: -2,
+        ["system.attributes.con.value"]: -2,
+        ["system.attributes.agl.value"]: -2,
+        ["system.attributes.int.value"]: 1,
+        ["system.attributes.wil.value"]: 1,
+        ["system.attributes.cha.value"]: 0,
+      },
+    };
+    const ageModifiers = modifiers[age];
 
     Object.entries(attributes).forEach(([key, value]) => {
+      const modifierKey = `system.attributes.${key}.value`;
+      const modifier = ageModifiers[modifierKey] ?? 0;
+
       system.attributes[key] = {
-        base: value,
+        base: value + modifier,
+        value: value + modifier,
       };
+
       if (key === "con") {
-        system.hitPoints.value = value;
+        system.hitPoints.value = value + modifier;
       }
+
       if (key === "wil") {
-        system.willPoints.value = value;
+        system.willPoints.value = value + modifier;
       }
     });
-
     const actor = await Actor.create({
       name,
       type: "character",
-      system,
+      system: system,
       ownership: {
         [userId]: 3,
       },
     });
-    await actor.update({ "system.age": age });
-    const kinUuid = this.data.kinUuid;
-    const professionUuid = this.data.professionUuid;
+
     if (kinUuid !== "") {
       const kin = await fromUuid(kinUuid);
       const kinData = kin.toObject();
       await actor.createEmbeddedDocuments("Item", [kinData]);
       await actor.updateKinAbilities();
     }
+
     if (professionUuid !== "") {
       const profession = await fromUuid(professionUuid);
       const professionData = profession.toObject();
@@ -83,12 +121,11 @@ export default class CreateActor {
         }
       }
     }
-    const gear = this.data.selectedGear;
+
     if (gear !== "") {
       const entries = [];
 
-      const itemRegex =
-        /(?:(\d+)(?:\{[^}]*\})?x)?@UUID\[([^\]]+)\]\{([^}]+)\}/g;
+      const itemRegex = /(?:(\d+)\s*)?@UUID\[([^\]]+)\]\{([^}]+)\}/g;
 
       for (const match of gear.matchAll(itemRegex)) {
         entries.push({
@@ -117,7 +154,6 @@ export default class CreateActor {
         `(\\d+)(?:\\{[^}]*\\})?\\s+(${currencyNames.join("|")})`,
         "gi",
       );
-      console.log(gear.matchAll(currencyRegex));
       for (const match of gear.matchAll(currencyRegex)) {
         const quantity = Number(match[1]);
         const currencyName = match[2].toLowerCase();
@@ -187,7 +223,6 @@ export default class CreateActor {
         await actor.update(actorUpdates);
       }
     }
-    const skills = this.data.selectedSkills;
 
     if (skills.length > 0) {
       const updates = actor.items
@@ -207,5 +242,20 @@ export default class CreateActor {
 
       await Promise.all(updates);
     }
+
+    if (memento !== "") {
+      const mementoItem = await fromUuid(memento);
+      const data = mementoItem.toObject();
+      await actor.createEmbeddedDocuments("Item", [data]);
+    }
+
+    if (weakness !== "") {
+      await actor.update({ "system.weaknes": weakness });
+    }
+    game.modules.get("dragonbane-character-creation-tool").socketHandler.emit({
+      type: "actorCreated",
+      userId: userId,
+      name: this.data.name,
+    });
   }
 }

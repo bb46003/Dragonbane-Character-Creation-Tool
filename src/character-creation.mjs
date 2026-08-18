@@ -27,6 +27,7 @@ export default class DoDCharacterCreation extends HandlebarsApplicationMixin(
       },
       gear: "",
       selectedGear: "",
+      weakness: "",
       memento: "",
       numberOfSelectedSkills: 4,
       selectedSkills: [],
@@ -431,6 +432,15 @@ export default class DoDCharacterCreation extends HandlebarsApplicationMixin(
       });
 
       updateSkills();
+
+      const uiConfig = game.settings.get("core", "uiConfig");
+      const theme = uiConfig.colorScheme.interface;
+      const proseMirrors = element.querySelectorAll("prose-mirror");
+      proseMirrors.forEach((proseMirror) => {
+        proseMirror.classList.add(theme);
+      });
+      professionSkillsElement.classList.add(theme);
+      otherSkillsElement.classList.add(theme);
     }
 
     const inputName = element.querySelector('input[name="name"]');
@@ -772,7 +782,7 @@ export default class DoDCharacterCreation extends HandlebarsApplicationMixin(
         }
       });
     }
-    if (currentTabName === "gear") {
+    if (currentTabName === "gear" && direction === 1) {
       const gearTableUuid = await this._prepareGearTable();
       const gearTable = await fromUuid(gearTableUuid);
 
@@ -1037,6 +1047,11 @@ export default class DoDCharacterCreation extends HandlebarsApplicationMixin(
           dataset: data,
         });
     }
+    const summary = this.element.querySelector(".tab.summary");
+
+    await ChatMessage.create({
+      content: summary.innerHTML,
+    });
     this.close();
   }
 }

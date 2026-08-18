@@ -13,6 +13,17 @@
       "flags": {}
     }
   ],
+   "relationships": {
+    "systems": [
+      {
+        "id": "dragonbane",
+        "type": "system",
+        "compatibility": {
+          "minimum": "3.0",
+          "verified": "4.1"}
+      }
+    ]
+  },
   "esmodules": ["src/main.mjs"],
   "styles": ["dragonbane-character-creation-tool.css"],
   "languages": [

@@ -46,6 +46,7 @@
     },
     "message": {
       "flavor": "Rzut na {flavor}"
-    }
+    },
+    "yourCharacterIsCreated": "Twoja postać <strong>{name}</Strong> została stworzona"
   }
 }

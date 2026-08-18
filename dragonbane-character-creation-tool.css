@@ -14,18 +14,30 @@
       align-items: center;
     }
   }
-  .other-skills,
-  .profession-skills {
+  .other-skills.light,
+  .profession-skills.light {
     border: 1px solid black;
     border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  .other-skills.dark,
+  .profession-skills.dark {
+    border: 1px solid white;
+    border-radius: 5px;
+    margin-bottom: 10px;
   }
   .skills {
     label {
       max-width: 120px;
     }
   }
-  prose-mirror {
+  prose-mirror.light {
     border: 1px solid black;
+    border-radius: 5px;
+    min-height: 350px;
+  }
+  prose-mirror.dark {
+    border: 1px solid white;
     border-radius: 5px;
     min-height: 350px;
   }
