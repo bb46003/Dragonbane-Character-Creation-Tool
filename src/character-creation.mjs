@@ -189,11 +189,12 @@ export default class DoDCharacterCreation extends HandlebarsApplicationMixin(
     if (additionalHA) {
       context.heroicAbilities = await this._prepareHA(
         context.profession[this._state.selectedProfessionIndex],
-        context.kin[this._state.selectedKinIndex]);
-        this._state.selectedHA = context.heroicAbilities[0].id;
-        if(this._state.selectedHA !== ""){
-        context.selectedHA = await this._prepareSelectedHA()
-        } 
+        context.kin[this._state.selectedKinIndex],
+      );
+      this._state.selectedHA = context.heroicAbilities[0]?.id ?? ""  ;
+      if (this._state.selectedHA !== "") {
+        context.selectedHA = await this._prepareSelectedHA();
+      }
     }
 
     return context;
@@ -213,7 +214,11 @@ export default class DoDCharacterCreation extends HandlebarsApplicationMixin(
   // =========================
 
   async _prepareKin() {
-    const items = game.items.filter((i) => i.type === "kin");
+        const skippedFolder = await game.settings.get(
+      "dragonbane-character-creation-tool",
+      "selectedFoldersKin",
+    );
+    const items = game.items.filter((i) => i.type === "kin"  && !i.folder.name.includes(skippedFolder),);
 
     const kin = items.map(async (item) => ({
       name: item.name,
@@ -230,7 +235,11 @@ export default class DoDCharacterCreation extends HandlebarsApplicationMixin(
   }
 
   async _prepareProfession() {
-    const items = game.items.filter((i) => i.type === "profession");
+    const skippedFolder = await game.settings.get(
+      "dragonbane-character-creation-tool",
+      "selectedFoldersProfessions",
+    );
+    const items = game.items.filter((i) => i.type === "profession" && !i.folder.name.includes(skippedFolder),);
 
     const profession = items.map(async (item) => ({
       name: item.name,
@@ -372,35 +381,41 @@ export default class DoDCharacterCreation extends HandlebarsApplicationMixin(
     );
     return names;
   }
-async _prepareHA(profession, kin) {
+  async _prepareHA(profession, kin) {
     const professionHA = profession.abilities;
-    const kinHA = kin.abilities;
-
+    const kinHA = kin?.abilities;
+    if(!kinHA) return {}
     const abilityNames = [...professionHA, ...kinHA].map(
-        ability => ability.name
+      (ability) => ability.name,
     );
-
+    const skippedFolder = await game.settings.get(
+      "dragonbane-character-creation-tool",
+      "selectedFoldersHA",
+    );
     const worldHA = game.items.filter(
-        item => item.type === "ability" && !abilityNames.includes(item.name)
+      (item) =>
+        item.type === "ability" &&
+        !abilityNames.includes(item.name) &&
+        !item.folder.name.includes(skippedFolder),
     );
 
-    const HA = worldHA.map(item => ({
-        id: item.uuid,
-        name: item.name
+    const HA = worldHA.map((item) => ({
+      id: item.uuid,
+      name: item.name,
     }));
 
     return HA;
-}
-async _prepareSelectedHA(){
-  const HA = await fromUuid(this._state.selectedHA);
-  const selectedHA = {
-    name: HA.name,
-    itemDescription: await this.enrich(HA.system.itemDescription),
-    wp: HA.system.wp,
-    boons: HA.system.boons,
   }
-  return selectedHA
-}
+  async _prepareSelectedHA() {
+    const HA = await fromUuid(this._state.selectedHA);
+    const selectedHA = {
+      name: HA.name,
+      itemDescription: await this.enrich(HA.system.itemDescription),
+      wp: HA.system.wp,
+      boons: HA.system.boons,
+    };
+    return selectedHA;
+  }
   async _onRender(context, options) {
     await super._onRender(context, options);
 
@@ -507,12 +522,12 @@ async _prepareSelectedHA(){
     });
 
     const additionalHA = element.querySelector(".additionalHA");
-    if(additionalHA){
+    if (additionalHA) {
       additionalHA.addEventListener("change", (ev) => {
         const id = ev.target.selectedOptions[0].dataset.id;
         this._state.selectedHA = id;
-        this.render()
-      })
+        this.render();
+      });
     }
   }
   _updateSwapOptions(selects) {
@@ -769,12 +784,12 @@ async _prepareSelectedHA(){
     const currentTab = app.form.querySelector(".tab.active");
     let currentTabName = currentTab.dataset.tab;
     let skip = false;
-    if(currentTabName === "additionalHA"){
+    if (currentTabName === "additionalHA") {
       skip = true;
-      currentTabName = "profession"
-      if (direction === -1){
-        direction = 0
-      };
+      currentTabName = "profession";
+      if (direction === -1) {
+        direction = 0;
+      }
     }
     let index = tabs.indexOf(currentTabName);
     if (index === -1) index = 0;
@@ -789,6 +804,13 @@ async _prepareSelectedHA(){
     ) {
       nextIndex = index + 2 * direction;
       nextTabName = tabs[nextIndex];
+    }
+    const additionalHA = game.settings.get(
+      "dragonbane-character-creation-tool",
+      "additionalHA",
+    );
+    if (additionalHA && currentTabName === "age" && direction === -1) {
+      nextTabName = "additionalHA";
     }
     const nextTab = app.form.querySelector(`.tab[data-tab="${nextTabName}"]`);
     const previousButton = app.form.querySelector('button[data-type="-1"]');
@@ -871,12 +893,14 @@ async _prepareSelectedHA(){
       }
       this._state.selectedGear = selectedGear;
     }
-        const additionalHA = game.settings.get(
-      "dragonbane-character-creation-tool",
-      "additionalHA",
-    );
-    if(additionalHA && currentTabName === "profession" && !skip ){
-      nextTabName = "additionalHA"
+
+    if (
+      additionalHA &&
+      currentTabName === "profession" &&
+      !skip &&
+      direction === 1
+    ) {
+      nextTabName = "additionalHA";
     }
     this._state.activeTab = nextTabName;
     currentTab.classList.remove("active");
@@ -1107,7 +1131,7 @@ async _prepareSelectedHA(){
     const professions = await this._prepareProfession();
     const kin = kins[this._state.selectedKinIndex];
     data.professionUuid = professions[this._state.selectedProfessionIndex].uuid;
-    data.kinUuid = kin.uuid;
+    data.kinUuid = kin?.uuid ?? "";
     if (canCreatActor) {
       const actor = new CreateActor(user._id, data);
       await actor.create();

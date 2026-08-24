@@ -48,6 +48,9 @@
       "flavor": "Rzut na {flavor}"
     },
     "yourCharacterIsCreated": "Twoja postać <strong>{name}</Strong> została stworzona",
-    "additionalHA": "Wybierz dodatkową Zdolność Heroiczną"
+    "additionalHA": "Wybrana dodatkową Zdolność Heroiczną",
+    "settings": {
+      "aditionalHA": "Pozwól na dodatkową Zdolność Heroiczną"
+    }
   }
 }

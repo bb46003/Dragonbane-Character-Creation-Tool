@@ -30,6 +30,12 @@
                 {{/each}}
             </ul>
         </div>
+        {{#if selectedHA}}
+            <div class="flexrow">
+                <label>{{localize "DCCT.additionalHA"}}</label>
+                <label>{{selectedHA.name}}</label>
+            </div>
+        {{/if}}
         <div class="flexrow">
             <label> {{localize "DCCT.characterCreation.name"}}</label>
             <label class="bold">{{_state.name}}</label>

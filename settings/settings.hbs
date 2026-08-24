@@ -1,0 +1,16 @@
+<div class="form-group skip-folder">
+    <label>{{localize "DCCT.settings.selectFolderToSkip"}}</label>
+
+    <div class="settings-folder-list">
+        {{#each uniqueFolderNames}}
+            <div class="flexrow">
+                <label>{{this}}</label>
+                <input
+                    type="checkbox"
+                    data-folder="{{this}}"
+                    {{#if (isInArray this ../selectedFolders)}}checked{{/if}}
+                >
+            </div>
+        {{/each}}
+    </div>
+</div>

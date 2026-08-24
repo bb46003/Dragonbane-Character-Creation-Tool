@@ -48,6 +48,16 @@
       "flavor": "Roll for {flavor}"
     },
     "yourCharacterIsCreated": "Your character <strong>{name}</Strong> was created",
-    "additionalHA": "Select additional Heroic Abilities"
+    "additionalHA": "Selected additional Heroic Abilities",
+    "settings": {
+      "aditionalHA": "Allow for additional Heroic Ability",
+      "aditionalHAHint": "During Character creation additional tab will be added to select additional HA",
+      "skippedFoldersHA": "Define folders with HA to skip",
+      "skippedFoldersHAHint": "Heroic Abilities in selected folders will not be avaliable in Character Creation Tool",
+      "skippedFolders": "Define folders to skip",
+      "skippedFoldersKinHint": "Kins in selected folders will not be avaliable in Character Creation Tool",
+      "skippedFoldersProfessionHint": "Professions in selected folders will not be avaliable in Character Creation Tool"
+    },
+    "selectAdditionallHA": "Select Additional Heroic Ability"
   }
 }

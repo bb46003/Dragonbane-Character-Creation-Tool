@@ -15,6 +15,76 @@ Hooks.once("init", function () {
     default: false,
     config: true,
   });
+  game.settings.register(
+    "dragonbane-character-creation-tool",
+    "skip-folder-ha",
+    {
+      name: game.i18n.localize("DCCT.settings.skippedFoldersHA"),
+      hint: game.i18n.localize("DCCT.settings.skippedFoldersHAHint"),
+      scope: "world",
+      type: Boolean,
+      default: false,
+      config: true,
+    },
+  );
+  game.settings.register(
+    "dragonbane-character-creation-tool",
+    "selectedFoldersHA",
+    {
+      name: "Selected Folders",
+      scope: "world",
+      type: Array,
+      config: false,
+        default: []
+    },
+  );
+  game.settings.register(
+    "dragonbane-character-creation-tool",
+    "skip-folder-kin",
+    {
+      name: game.i18n.localize("DCCT.settings.skippedFolders"),
+      hint: game.i18n.localize("DCCT.settings.skippedFoldersHint"),
+      scope: "world",
+      type: Boolean,
+      default: false,
+      config: true,
+    },
+  );
+  game.settings.register(
+    "dragonbane-character-creation-tool",
+    "selectedFoldersKin",
+    {
+      name: "Selected Folders",
+      scope: "world",
+      type: Array,
+      config: false,
+        default: []
+    },
+  );
+  game.settings.register(
+    "dragonbane-character-creation-tool",
+    "skip-folder-proffesions",
+    {
+      name: game.i18n.localize("DCCT.settings.skippedFolders"),
+      hint: game.i18n.localize("DCCT.settings.skippedFoldersHint"),
+      scope: "world",
+      type: Boolean,
+      default: false,
+      config: true,
+    },
+  );
+  game.settings.register(
+    "dragonbane-character-creation-tool",
+    "selectedFoldersProfessions",
+    {
+      name: "Selected Folders",
+      scope: "world",
+      type: Array,
+      config: false,
+      default: []
+    },
+  );
+  registerHandlebarsHelpers();
 });
 
 Hooks.on("renderAbstractSidebarTab", function (ev, app) {
@@ -45,3 +115,101 @@ Hooks.on("renderAbstractSidebarTab", function (ev, app) {
   });
   currentButtons.after(button);
 });
+
+Hooks.on("renderSettingsConfig", async (app, html, data) => {
+  const settings = [
+    {
+      skipKey: "skip-folder-ha",
+      selectedKey: "selectedFoldersHA",
+      inputName: "dragonbane-character-creation-tool.skip-folder-ha",
+      itemType: "ability",
+    },
+    {
+      skipKey: "skip-folder-kin",
+      selectedKey: "selectedFoldersKin",
+      inputName: "dragonbane-character-creation-tool.skip-folder-kin",
+      itemType: "kin",
+    },
+    {
+      skipKey: "skip-folder-proffesions",
+      selectedKey: "selectedFoldersProfessions",
+      inputName: "dragonbane-character-creation-tool.skip-folder-proffesions",
+      itemType: "profession",
+    },
+  ];
+
+  for (const config of settings) {
+    const skipInput = html.querySelector(`input[name="${config.inputName}"]`);
+    if (skipInput) {
+      skipInput.addEventListener("change", async (ev) => {
+        await game.settings.set(
+          "dragonbane-character-creation-tool",
+          config.skipKey,
+          ev.target.checked,
+        );
+        app.render({ force: true });
+      });
+    }
+
+    const skipFolder = game.settings.get(
+      "dragonbane-character-creation-tool",
+      config.skipKey,
+    );
+    if (!skipFolder) {
+      continue;
+    }
+    const setting = html.querySelector(
+      `#settings-config-dragonbane-character-creation-tool\\.${config.skipKey}`,
+    );
+    if (!setting) {
+      continue;
+    }
+    const uniqueFolderNames = [
+      ...new Set(
+        game.items
+          .filter((item) => item.type === config.itemType)
+          .map((item) => item.folder?.name)
+          .filter(Boolean),
+      ),
+    ];
+    const selectedFolders = game.settings.get(
+      "dragonbane-character-creation-tool",
+      config.selectedKey,
+    );
+    const content = await foundry.applications.handlebars.renderTemplate(
+      "modules/dragonbane-character-creation-tool/settings/settings.hbs",
+      {
+        uniqueFolderNames: uniqueFolderNames,
+        selectedFolders: selectedFolders,
+      },
+    );
+    setting.closest(".form-group").insertAdjacentHTML("afterend", content);
+    const folderInputs = html.querySelectorAll(
+      ".settings-folder-list input[type='checkbox']",
+    );
+
+    for (const input of folderInputs) {
+      input.addEventListener("change", async () => {
+        const selected = Array.from(
+          html.querySelectorAll(
+            ".settings-folder-list input[type='checkbox']:checked",
+          ),
+        ).map((input) => input.dataset.folder);
+        await game.settings.set(
+          "dragonbane-character-creation-tool",
+          config.selectedKey,
+          selected,
+        );
+      });
+    }
+  }
+});
+function registerHandlebarsHelpers() {
+  Handlebars.registerHelper("isInArray", (string, array) => {
+    if(string === null){
+      return false
+    }else{
+    return array.includes(string);
+    }
+  });
+}

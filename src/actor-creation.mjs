@@ -16,6 +16,7 @@ export default class CreateActor {
     const professionUuid = this.data.professionUuid;
     const weakness = this.data.weakness;
     const memento = this.data.memento;
+    const selectedHA = this.data.selectedHA;
 
     const allSet = Object.values(attributes).every((value) => value !== 0);
 
@@ -251,6 +252,11 @@ export default class CreateActor {
 
     if (weakness !== "") {
       await actor.update({ "system.weaknes": weakness });
+    }
+    if(selectedHA !== ""){
+      const mementoItem = await fromUuid(memento);
+      const data = mementoItem.toObject();
+      await actor.createEmbeddedDocuments("Item", [data]);
     }
     game.modules.get("dragonbane-character-creation-tool").socketHandler.emit({
       type: "actorCreated",
