@@ -13,14 +13,15 @@
       "flags": {}
     }
   ],
-   "relationships": {
+  "relationships": {
     "systems": [
       {
         "id": "dragonbane",
         "type": "system",
         "compatibility": {
           "minimum": "3.0",
-          "verified": "4.1"}
+          "verified": "4.1"
+        }
       }
     ]
   },
@@ -43,5 +44,4 @@
   "url": "Filled in by the release workflow",
   "download": "Filled in by the release workflow",
   "manifest": "Filled in by the release workflow"
-
 }

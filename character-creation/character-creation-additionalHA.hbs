@@ -1,0 +1,32 @@
+<section
+  class="tab additionalHA {{tabs.additionalHA.cssClass}}"
+  action-data="tab"
+  data-tab="additionalHA"
+>
+  <div class="block">
+    <div class="form-group">
+      <label>{{localize "DCCT.additionalHA"}}</label>
+    </div>
+    <div>
+      <select class="additionalHA">
+        {{#each heroicAbilities as |HA|}}
+          <option data-id={{HA.id}} {{#if (eq HA.id ../_state.selectedHA)}} selected {{/if}}>{{HA.name}}</option>
+        {{/each}}
+      </select>
+    </div>
+    <div class="selected-aditional-ha">
+      <label>{{selectedHA.name}}</label>
+      <p>{{{selectedHA.itemDescription}}}</p>
+      <div class="flexrow">
+        <label>{{localize "DoD.ability.wp"}}</label>
+        <p>{{selectedHA.wp}}</p>
+      </div>
+      {{#if selectedHA.boons}}
+        <div class="flexrow">
+          <label>{{localize "DoD.ui.dialog.boons"}}</label>
+          <p>{{selectedHA.boons}}</p>
+        </div>
+      {{/if}}
+    </div>
+  </div>
+</section>

@@ -47,6 +47,7 @@
     "message": {
       "flavor": "Rzut na {flavor}"
     },
-    "yourCharacterIsCreated": "Twoja postać <strong>{name}</Strong> została stworzona"
+    "yourCharacterIsCreated": "Twoja postać <strong>{name}</Strong> została stworzona",
+    "additionalHA": "Wybierz dodatkową Zdolność Heroiczną"
   }
 }

@@ -34,6 +34,7 @@ export default class DoDCharacterCreation extends HandlebarsApplicationMixin(
       activeTab: "kin",
       allRolled: false,
       swapAttr: false,
+      selectedHA: "",
     };
 
     this._onKinChange = this._onKinChange.bind(this);
@@ -118,6 +119,10 @@ export default class DoDCharacterCreation extends HandlebarsApplicationMixin(
       template:
         "modules/dragonbane-character-creation-tool/character-creation/character-creation-summary.hbs",
     },
+    additionalHA: {
+      template:
+        "modules/dragonbane-character-creation-tool/character-creation/character-creation-additionalHA.hbs",
+    },
   };
   static TABS = {
     items: {
@@ -130,6 +135,7 @@ export default class DoDCharacterCreation extends HandlebarsApplicationMixin(
         { id: "weakness" },
         { id: "gear" },
         { id: "memento" },
+        { id: "additionalHA" },
         { id: "summary" },
       ],
     },
@@ -176,6 +182,20 @@ export default class DoDCharacterCreation extends HandlebarsApplicationMixin(
     if (this._state.selectedGear !== "") {
       context.gearName = await this._prepareGearName(this._state.selectedGear);
     }
+    const additionalHA = game.settings.get(
+      "dragonbane-character-creation-tool",
+      "additionalHA",
+    );
+    if (additionalHA) {
+      context.heroicAbilities = await this._prepareHA(
+        context.profession[this._state.selectedProfessionIndex],
+        context.kin[this._state.selectedKinIndex]);
+        this._state.selectedHA = context.heroicAbilities[0].id;
+        if(this._state.selectedHA !== ""){
+        context.selectedHA = await this._prepareSelectedHA()
+        } 
+    }
+
     return context;
   }
   async enrich(html) {
@@ -352,6 +372,35 @@ export default class DoDCharacterCreation extends HandlebarsApplicationMixin(
     );
     return names;
   }
+async _prepareHA(profession, kin) {
+    const professionHA = profession.abilities;
+    const kinHA = kin.abilities;
+
+    const abilityNames = [...professionHA, ...kinHA].map(
+        ability => ability.name
+    );
+
+    const worldHA = game.items.filter(
+        item => item.type === "ability" && !abilityNames.includes(item.name)
+    );
+
+    const HA = worldHA.map(item => ({
+        id: item.uuid,
+        name: item.name
+    }));
+
+    return HA;
+}
+async _prepareSelectedHA(){
+  const HA = await fromUuid(this._state.selectedHA);
+  const selectedHA = {
+    name: HA.name,
+    itemDescription: await this.enrich(HA.system.itemDescription),
+    wp: HA.system.wp,
+    boons: HA.system.boons,
+  }
+  return selectedHA
+}
   async _onRender(context, options) {
     await super._onRender(context, options);
 
@@ -448,6 +497,7 @@ export default class DoDCharacterCreation extends HandlebarsApplicationMixin(
       const nextButton = element.querySelector('button[data-type="1"]');
       if (nextButton) {
         nextButton.disabled = event.target.value.trim() === "";
+        this._state.name = event.target.value;
       }
     });
     element.addEventListener("save", async (event) => {
@@ -455,6 +505,15 @@ export default class DoDCharacterCreation extends HandlebarsApplicationMixin(
       this._state[target.name] = target.value;
       this.render();
     });
+
+    const additionalHA = element.querySelector(".additionalHA");
+    if(additionalHA){
+      additionalHA.addEventListener("change", (ev) => {
+        const id = ev.target.selectedOptions[0].dataset.id;
+        this._state.selectedHA = id;
+        this.render()
+      })
+    }
   }
   _updateSwapOptions(selects) {
     const selectArray = Array.from(selects);
@@ -691,7 +750,7 @@ export default class DoDCharacterCreation extends HandlebarsApplicationMixin(
     ev.preventDefault();
 
     const target = ev.target;
-    const direction = Number(target.dataset.type);
+    let direction = Number(target.dataset.type);
 
     const tabs = [
       "kin",
@@ -708,8 +767,15 @@ export default class DoDCharacterCreation extends HandlebarsApplicationMixin(
     const app = this;
 
     const currentTab = app.form.querySelector(".tab.active");
-    const currentTabName = currentTab.dataset.tab;
-
+    let currentTabName = currentTab.dataset.tab;
+    let skip = false;
+    if(currentTabName === "additionalHA"){
+      skip = true;
+      currentTabName = "profession"
+      if (direction === -1){
+        direction = 0
+      };
+    }
     let index = tabs.indexOf(currentTabName);
     if (index === -1) index = 0;
 
@@ -804,6 +870,13 @@ export default class DoDCharacterCreation extends HandlebarsApplicationMixin(
         return;
       }
       this._state.selectedGear = selectedGear;
+    }
+        const additionalHA = game.settings.get(
+      "dragonbane-character-creation-tool",
+      "additionalHA",
+    );
+    if(additionalHA && currentTabName === "profession" && !skip ){
+      nextTabName = "additionalHA"
     }
     this._state.activeTab = nextTabName;
     currentTab.classList.remove("active");

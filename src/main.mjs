@@ -7,6 +7,14 @@ Hooks.once("init", function () {
   };
   const module = game.modules.get("dragonbane-character-creation-tool");
   module.socketHandler = new SocketHandler();
+  game.settings.register("dragonbane-character-creation-tool", "additionalHA", {
+    name: game.i18n.localize("DCCT.settings.aditionalHA"),
+    hint: game.i18n.localize("DCCT.settings.aditionalHAHint"),
+    scope: "world",
+    type: Boolean,
+    default: false,
+    config: true,
+  });
 });
 
 Hooks.on("renderAbstractSidebarTab", function (ev, app) {
