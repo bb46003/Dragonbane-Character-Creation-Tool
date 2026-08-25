@@ -153,7 +153,7 @@ export default class DoDCharacterCreation extends HandlebarsApplicationMixin(
     context.numbersOfProfession = context.profession.length;
     context.selectedKin = context.kin[this._state.selectedKinIndex];
     context.selectedProfession =
-      context.profession[this._state.selectedProfessionIndex];
+    context.profession[this._state.selectedProfessionIndex];
     context._state = this._state;
     context.tabs[this._state.activeTab].cssClass = "active";
     context.config = CONFIG.DoD;
@@ -191,10 +191,11 @@ export default class DoDCharacterCreation extends HandlebarsApplicationMixin(
         context.profession[this._state.selectedProfessionIndex],
         context.kin[this._state.selectedKinIndex],
       );
-      this._state.selectedHA = context.heroicAbilities[0]?.id ?? ""  ;
-      if (this._state.selectedHA !== "") {
-        context.selectedHA = await this._prepareSelectedHA();
+      if (this._state.selectedHA === "") {
+        this._state.selectedHA = context.heroicAbilities[0]?.id ?? ""  ;
       }
+      context.selectedHA = await this._prepareSelectedHA();
+      
     }
 
     return context;
@@ -218,7 +219,8 @@ export default class DoDCharacterCreation extends HandlebarsApplicationMixin(
       "dragonbane-character-creation-tool",
       "selectedFoldersKin",
     );
-    const items = game.items.filter((i) => i.type === "kin"  && !i.folder.name.includes(skippedFolder),);
+    const items = game.items.filter((i) => 
+      i.type === "kin"  && !skippedFolder.includes(i.folder?.name),);
 
     const kin = items.map(async (item) => ({
       name: item.name,
@@ -239,7 +241,8 @@ export default class DoDCharacterCreation extends HandlebarsApplicationMixin(
       "dragonbane-character-creation-tool",
       "selectedFoldersProfessions",
     );
-    const items = game.items.filter((i) => i.type === "profession" && !i.folder.name.includes(skippedFolder),);
+    const items = game.items.filter((i) => 
+      i.type === "profession" && !skippedFolder.includes(i.folder?.name));
 
     const profession = items.map(async (item) => ({
       name: item.name,
@@ -331,7 +334,7 @@ export default class DoDCharacterCreation extends HandlebarsApplicationMixin(
     const profession = allProfession[this._state.selectedProfessionIndex];
     const gearTable = game.tables.filter((table) => {
       const tableName = table.name.toLowerCase();
-      const professionMatch = tableName.includes(profession.name.toLowerCase());
+      const professionMatch = tableName.includes(profession?.name.toLowerCase());
       const gearMatch = gear.some((word) =>
         tableName.startsWith(word.slice(0, 5).toLowerCase()),
       );
@@ -382,8 +385,8 @@ export default class DoDCharacterCreation extends HandlebarsApplicationMixin(
     return names;
   }
   async _prepareHA(profession, kin) {
-    const professionHA = profession.abilities;
-    const kinHA = kin?.abilities;
+    const professionHA = profession?.abilities ?? [];
+    const kinHA = kin?.abilities ?? [];
     if(!kinHA) return {}
     const abilityNames = [...professionHA, ...kinHA].map(
       (ability) => ability.name,
@@ -396,7 +399,7 @@ export default class DoDCharacterCreation extends HandlebarsApplicationMixin(
       (item) =>
         item.type === "ability" &&
         !abilityNames.includes(item.name) &&
-        !item.folder.name.includes(skippedFolder),
+        !skippedFolder.includes(item.folder?.name)
     );
 
     const HA = worldHA.map((item) => ({
@@ -1129,9 +1132,20 @@ export default class DoDCharacterCreation extends HandlebarsApplicationMixin(
     const data = this._state;
     const kins = await this._prepareKin();
     const professions = await this._prepareProfession();
-    const kin = kins[this._state.selectedKinIndex];
-    data.professionUuid = professions[this._state.selectedProfessionIndex].uuid;
-    data.kinUuid = kin?.uuid ?? "";
+    if(kins.length > 0){
+      const kin = kins[this._state.selectedKinIndex];
+       data.kinUuid = kin?.uuid
+    }else{
+      data.kinUuid = "";
+    }
+    
+    if(professions.length > 0){
+      profession = professions[this._state.selectedProfessionIndex].uuid;
+      data.professionUuid  = profession?.uuid;
+    }else{
+      data.professionUuid = "";
+    }   
+   
     if (canCreatActor) {
       const actor = new CreateActor(user._id, data);
       await actor.create();

@@ -42,8 +42,8 @@ Hooks.once("init", function () {
     "dragonbane-character-creation-tool",
     "skip-folder-kin",
     {
-      name: game.i18n.localize("DCCT.settings.skippedFolders"),
-      hint: game.i18n.localize("DCCT.settings.skippedFoldersHint"),
+      name: game.i18n.localize("DCCT.settings.skippedFoldersKin"),
+      hint: game.i18n.localize("DCCT.settings.skippedFoldersKinHint"),
       scope: "world",
       type: Boolean,
       default: false,
@@ -58,15 +58,15 @@ Hooks.once("init", function () {
       scope: "world",
       type: Array,
       config: false,
-        default: []
+      default: []
     },
   );
   game.settings.register(
     "dragonbane-character-creation-tool",
     "skip-folder-proffesions",
     {
-      name: game.i18n.localize("DCCT.settings.skippedFolders"),
-      hint: game.i18n.localize("DCCT.settings.skippedFoldersHint"),
+      name: game.i18n.localize("DCCT.settings.skippedFoldersProfessions"),
+      hint: game.i18n.localize("DCCT.settings.skippedFoldersProfessionHint"),
       scope: "world",
       type: Boolean,
       default: false,
@@ -147,6 +147,13 @@ Hooks.on("renderSettingsConfig", async (app, html, data) => {
           config.skipKey,
           ev.target.checked,
         );
+        if(!ev.target.checked){
+          await game.settings.set(
+            "dragonbane-character-creation-tool",
+            config.selectedKey,
+            []
+          )
+        }
         app.render({ force: true });
       });
     }

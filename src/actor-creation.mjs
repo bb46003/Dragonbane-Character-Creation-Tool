@@ -254,8 +254,8 @@ export default class CreateActor {
       await actor.update({ "system.weaknes": weakness });
     }
     if(selectedHA !== ""){
-      const mementoItem = await fromUuid(memento);
-      const data = mementoItem.toObject();
+      const selectedHAItem = await fromUuid(selectedHA);
+      const data = selectedHAItem.toObject();
       await actor.createEmbeddedDocuments("Item", [data]);
     }
     game.modules.get("dragonbane-character-creation-tool").socketHandler.emit({
