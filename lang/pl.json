@@ -49,8 +49,16 @@
     },
     "yourCharacterIsCreated": "Twoja postać <strong>{name}</Strong> została stworzona",
     "additionalHA": "Wybrana dodatkową Zdolność Heroiczną",
-    "settings": {
-      "aditionalHA": "Pozwól na dodatkową Zdolność Heroiczną"
-    }
+"settings": {
+  "aditionalHA": "Zezwalaj na dodatkową Zdolność Heroiczną",
+  "aditionalHAHint": "Podczas tworzenia postaci zostanie dodana dodatkowa zakładka umożliwiająca wybór dodatkowej Zdolności Heroicznej",
+  "skippedFoldersHA": "Określ foldery zawierające Zdolności Heroiczne do pominięcia",
+  "skippedFoldersHAHint": "Zdolności Heroiczne z wybranych folderów nie będą dostępne w Narzędziu Tworzenia Postaci",
+  "skippedFoldersKin": "Określ foldery zawierające Rody do pominięcia",
+  "skippedFoldersProfessions": "Określ foldery zawierające Profesje do pominięcia",
+  "skippedFoldersKinHint": "Rody z wybranych folderów nie będą dostępne w Narzędziu Tworzenia Postaci",
+  "skippedFoldersProfessionHint": "Profesje z wybranych folderów nie będą dostępne w Narzędziu Tworzenia Postaci"
+},
+"selectAdditionallHA": "Wybierz dodatkową Zdolność Heroiczną"
   }
 }
