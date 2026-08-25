@@ -171,14 +171,30 @@ Hooks.on("renderSettingsConfig", async (app, html, data) => {
     if (!setting) {
       continue;
     }
-    const uniqueFolderNames = [
-      ...new Set(
-        game.items
-          .filter((item) => item.type === config.itemType)
-          .map((item) => item.folder?.name)
-          .filter(Boolean),
-      ),
-    ];
+const uniqueFolders = [
+  ...new Map(
+    game.items
+      .filter((item) => item.type === config.itemType && item.folder)
+      .map((item) => {
+        const folder = item.folder;
+
+ const name = [
+  ...(folder.ancestors ?? []).toReversed(),
+  folder,
+]
+  .map((f) => f.name)
+  .join(" / ");
+
+        return [
+          folder.id,
+          {
+            name,
+            folderId: folder.id,
+          },
+        ];
+      }),
+  ).values(),
+];
     const selectedFolders = game.settings.get(
       "dragonbane-character-creation-tool",
       config.selectedKey,
@@ -186,7 +202,7 @@ Hooks.on("renderSettingsConfig", async (app, html, data) => {
     const content = await foundry.applications.handlebars.renderTemplate(
       "modules/dragonbane-character-creation-tool/settings/settings.hbs",
       {
-        uniqueFolderNames: uniqueFolderNames,
+        uniqueFolders: uniqueFolders,
         selectedFolders: selectedFolders,
       },
     );

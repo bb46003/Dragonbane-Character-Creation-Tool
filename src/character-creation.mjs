@@ -220,7 +220,7 @@ export default class DoDCharacterCreation extends HandlebarsApplicationMixin(
       "selectedFoldersKin",
     );
     const items = game.items.filter((i) => 
-      i.type === "kin"  && !skippedFolder.includes(i.folder?.name),);
+      i.type === "kin"  && !skippedFolder.includes(i.folder?.id),);
 
     const kin = items.map(async (item) => ({
       name: item.name,
@@ -242,7 +242,7 @@ export default class DoDCharacterCreation extends HandlebarsApplicationMixin(
       "selectedFoldersProfessions",
     );
     const items = game.items.filter((i) => 
-      i.type === "profession" && !skippedFolder.includes(i.folder?.name));
+      i.type === "profession" && !skippedFolder.includes(i.folder?.id));
 
     const profession = items.map(async (item) => ({
       name: item.name,
@@ -399,7 +399,7 @@ export default class DoDCharacterCreation extends HandlebarsApplicationMixin(
       (item) =>
         item.type === "ability" &&
         !abilityNames.includes(item.name) &&
-        !skippedFolder.includes(item.folder?.name)
+        !skippedFolder.includes(item.folder?.id)
     );
 
     const HA = worldHA.map((item) => ({
@@ -910,112 +910,157 @@ export default class DoDCharacterCreation extends HandlebarsApplicationMixin(
     nextTab.classList.add("active");
     this.render();
   }
-  async _selectGearOptions(description) {
-    const localizedOr = game.i18n.localize("DCCT.characterCreation.or").trim();
-    const escapedOr = localizedOr.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-    const orRegex = new RegExp(
-      `(@UUID\\[([^\\]]+)\\]\\{([^}]+)\\})\\s+(?:or|${escapedOr})\\s+(@UUID\\[([^\\]]+)\\]\\{([^}]+)\\})`,
-      "gi",
-    );
-    let result = description;
-    const matches = [...description.matchAll(orRegex)];
-    if (matches.length > 0) {
-      for (const match of matches) {
-        const [fullMatch, option1, uuid1, label1, option2, uuid2, label2] =
-          match;
+async _selectGearOptions(description) {
+  const localizedOr = game.i18n.localize("DCCT.characterCreation.or").trim();
+  const escapedOr = localizedOr.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const orRegex = new RegExp(
+    `((?:@UUID\\[([^\\]]+)\\]\\{([^}]+)\\})` +
+      `(?:\\s+(?:or|${escapedOr})\\s+` +
+      `@UUID\\[([^\\]]+)\\]\\{([^}]+)\\})+)`,
+    "gi",
+  );
 
-        const TextEditor = foundry.applications.ux.TextEditor.implementation;
-        const option1HTML = await TextEditor.enrichHTML(option1, {
-          async: true,
-        });
-        const option2HTML = await TextEditor.enrichHTML(option2, {
-          async: true,
-        });
-        const content = `
-                <form>
-                    <div class="form-group">
-                        <label>
-                            ${game.i18n.localize("DCCT.characterCreation.chooseOption")}
-                        </label>
-                        <select name="gear-option">
-                            <option value="${uuid1}">
-                                ${option1HTML}
-                            </option>
-                            <option value="${uuid2}">
-                                ${option2HTML}
-                            </option>
-                        </select>
-                    </div>
-                </form>
-            `;
+  let result = description;
+  const matches = [...description.matchAll(orRegex)];
 
-        const selected = await foundry.applications.api.DialogV2.wait({
-          window: {
-            title: game.i18n.localize(
-              "DCCT.characterCreation.selectGearOption",
-            ),
-          },
-          content,
-          buttons: [
-            {
-              action: "ok",
-              label: game.i18n.localize("DCCT.characterCreation.ok"),
-              icon: "fas fa-check",
-              default: true,
-              callback: (event, button) => {
-                return button.form.querySelector('[name="gear-option"]').value;
-              },
-            },
-            {
-              action: "cancel",
-              label: game.i18n.localize("DCCT.characterCreation.cancel"),
-              icon: "fas fa-times",
-            },
-          ],
-        });
-        if (!selected) {
-          return "";
-        }
-        const selectedOption = selected === uuid1 ? option1 : option2;
-        result = result.replace(fullMatch, selectedOption);
-      }
-    }
-    const rollRegex =
-      /\[\[\/(?:roll|r)\s+([^\]]+)\]\](?:\{[^}]+\})?\s*([^,@\[]+)?/gi;
+  for (const match of matches) {
+    const [fullMatch] = match;
 
-    const rollMatches = [...result.matchAll(rollRegex)];
+    const optionRegex = /@UUID\[([^\]]+)\]\{([^}]+)\}/gi;
+    const options = [...fullMatch.matchAll(optionRegex)].map((m) => ({
+      uuid: m[1],
+      text: m[0],
+    }));
 
-    for (const match of rollMatches) {
-      const [fullMatch, formula, textAfterRoll] = match;
-      const roll = await new Roll(formula.trim()).evaluate();
-      let flavor = textAfterRoll?.trim().replace(/^x\s*/, "") ?? "";
-      let uuidMatch = "";
-      if (!flavor) {
-        uuidMatch = result
-          .slice(match.index + fullMatch.length)
-          .match(/^\s*@UUID\[[^\]]+\]\{([^}]+)\}/i);
+    if (options.length < 2) continue;
+    const enrichedOptions = [];
 
-        if (uuidMatch) {
-          flavor = uuidMatch[1].trim();
-        } else {
-          uuidMatch = "";
-        }
-      }
+    for (const option of options) {
+      const html = await foundry.applications.ux.TextEditor.implementation.enrichHTML(
+        option.text,
+        { async: true },
+      );
 
-      await roll.toMessage({
-        flavor: game.i18n.format("DCCT.message.flavor", {
-          flavor,
-        }),
+      enrichedOptions.push({
+        ...option,
+        html,
       });
-      if (uuidMatch === "") {
-        result = result.replace(fullMatch, roll.total + " " + flavor);
+    }
+
+    const optionHTML = enrichedOptions
+      .map(
+        (option) => `
+          <option value="${option.uuid}">
+            ${option.html}
+          </option>
+        `,
+      )
+      .join("");
+
+    const content = `
+      <form>
+        <div class="form-group">
+          <label>
+            ${game.i18n.localize("DCCT.characterCreation.chooseOption")}
+          </label>
+
+          <select name="gear-option">
+            ${optionHTML}
+          </select>
+        </div>
+      </form>
+    `;
+
+    const selected = await foundry.applications.api.DialogV2.wait({
+      window: {
+        title: game.i18n.localize(
+          "DCCT.characterCreation.selectGearOption",
+        ),
+      },
+
+      content,
+
+      buttons: [
+        {
+          action: "ok",
+          label: game.i18n.localize("DCCT.characterCreation.ok"),
+          icon: "fas fa-check",
+          default: true,
+
+          callback: (event, button) => {
+            return button.form.querySelector(
+              '[name="gear-option"]',
+            ).value;
+          },
+        },
+
+        {
+          action: "cancel",
+          label: game.i18n.localize("DCCT.characterCreation.cancel"),
+          icon: "fas fa-times",
+        },
+      ],
+    });
+
+    if (!selected) {
+      return "";
+    }
+
+    // Find the selected UUID and replace the whole OR expression
+    const selectedOption = options.find(
+      (option) => option.uuid === selected,
+    );
+
+    if (selectedOption) {
+      result = result.replace(fullMatch, selectedOption.text);
+    }
+  }
+
+  // Roll handling stays unchanged
+  const rollRegex =
+    /\[\[\/(?:roll|r)\s+([^\]]+)\]\](?:\{[^}]+\})?\s*([^,@\[]+)?/gi;
+
+  const rollMatches = [...result.matchAll(rollRegex)];
+
+  for (const match of rollMatches) {
+    const [fullMatch, formula, textAfterRoll] = match;
+
+    const roll = await new Roll(formula.trim()).evaluate();
+
+    let flavor = textAfterRoll?.trim().replace(/^x\s*/, "") ?? "";
+
+    let uuidMatch = "";
+
+    if (!flavor) {
+      uuidMatch = result
+        .slice(match.index + fullMatch.length)
+        .match(/^\s*@UUID\[[^\]]+\]\{([^}]+)\}/i);
+
+      if (uuidMatch) {
+        flavor = uuidMatch[1].trim();
       } else {
-        result = result.replace(fullMatch, roll.total);
+        uuidMatch = "";
       }
     }
 
-    return result;
+    await roll.toMessage({
+      flavor: game.i18n.format("DCCT.message.flavor", {
+        flavor,
+      }),
+    });
+
+    if (uuidMatch === "") {
+      result = result.replace(
+        fullMatch,
+        roll.total + " " + flavor,
+      );
+    } else {
+      result = result.replace(fullMatch, roll.total);
+    }
   }
+
+  return result;
+}
   static #resetAttributes(ev) {
     this._state.attributes = {
       str: 0,
@@ -1140,8 +1185,8 @@ export default class DoDCharacterCreation extends HandlebarsApplicationMixin(
     }
     
     if(professions.length > 0){
-      profession = professions[this._state.selectedProfessionIndex].uuid;
-      data.professionUuid  = profession?.uuid;
+      const profession = professions[this._state.selectedProfessionIndex].uuid;
+      data.professionUuid  = profession;
     }else{
       data.professionUuid = "";
     }   
