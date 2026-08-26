@@ -411,6 +411,7 @@ export default class DoDCharacterCreation extends HandlebarsApplicationMixin(
   }
   async _prepareSelectedHA() {
     const HA = await fromUuid(this._state.selectedHA);
+    if(!HA) return {}
     const selectedHA = {
       name: HA.name,
       itemDescription: await this.enrich(HA.system.itemDescription),
@@ -635,7 +636,11 @@ export default class DoDCharacterCreation extends HandlebarsApplicationMixin(
 
     switch (type) {
       case "name":
-        this._state.name = value;
+        if(value === ""){
+          this._state.name = result.results[0].name;
+        }else{
+          this._state.name = value;
+        }
         break;
 
       case "age":
