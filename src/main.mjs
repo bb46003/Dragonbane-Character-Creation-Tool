@@ -3,6 +3,7 @@ import { SocketHandler } from "./socketHandler.mjs";
 
 Hooks.once("init", function () {
   game.dragonbane = {
+    ...game.dragonbane,
     characterCreation: DoDCharacterCreation,
   };
   const module = game.modules.get("dragonbane-character-creation-tool");
