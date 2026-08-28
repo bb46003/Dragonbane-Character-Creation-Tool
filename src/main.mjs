@@ -90,17 +90,20 @@ Hooks.once("init", function () {
 
 Hooks.on("renderAbstractSidebarTab", function (ev, app) {
   const element = app;
-
-  const header = element.querySelector(".directory-header.flexcol");
-  if (!header) return;
+  const actorTab = document.querySelector(".actors-sidebar")
+   if (!actorTab) return;
+  const header = actorTab.querySelector(".directory-header.flexcol");
+ 
 
   const currentButtons = header.querySelector(
     ".header-actions.action-buttons.flexrow",
   );
 
   if (!currentButtons) return;
-
+  const buttonExist = header.querySelector(".characer-creation");
+  if(buttonExist) return
   const button = document.createElement("button");
+  button.classList.add("characer-creation")
 
   button.type = "button";
   button.classList.add("header-control");
