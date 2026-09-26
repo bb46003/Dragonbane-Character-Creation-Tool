@@ -59,6 +59,9 @@
   "skippedFoldersKinHint": "Rody z wybranych folderów nie będą dostępne w Narzędziu Tworzenia Postaci",
   "skippedFoldersProfessionHint": "Profesje z wybranych folderów nie będą dostępne w Narzędziu Tworzenia Postaci"
 },
-"selectAdditionallHA": "Wybierz dodatkową Zdolność Heroiczną"
+"selectAdditionallHA": "Wybierz dodatkową Zdolność Heroiczną",
+    "WARNING":{
+      "maxSkillValue": "Maksymalna wartość atrybutu to 19, wartość dla {attributes} zostałą ustawiona na 18"
+    }
   }
 }

@@ -533,6 +533,26 @@ export default class DoDCharacterCreation extends HandlebarsApplicationMixin(
         this.render();
       });
     }
+    const attribueteTab = element.querySelector(".tab.attributes.active");
+    if(attribueteTab){
+      const inputs = attribueteTab.querySelectorAll("input");
+            
+      inputs.forEach(input =>{
+        input.addEventListener("change",() => {
+          const attribute = input.dataset.attribute;
+          let value = Number(input.value);
+          if(value > 18){
+            value = 18;
+            DoD_Utility.WARNING("DCCT.WARNING.maxSkillValue", {
+              attributes: game.i18n.localize(CONFIG.DoD.attributes[attribute]),
+            });
+          }
+          this._state.attributes[attribute] = value;
+          this.render()
+        })
+
+      })
+    }
   }
   _updateSwapOptions(selects) {
     const selectArray = Array.from(selects);
@@ -909,6 +929,13 @@ export default class DoDCharacterCreation extends HandlebarsApplicationMixin(
       direction === 1
     ) {
       nextTabName = "additionalHA";
+    }
+    if(currentTabName === "attributes"){
+      const inputs= app.form.querySelectorAll("input");
+      inputs.forEach(input =>{
+        const attribute = input.dataset.attribute;
+        this._state.attributes[attribute] = Number(input.value);
+      })
     }
     this._state.activeTab = nextTabName;
     currentTab.classList.remove("active");

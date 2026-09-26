@@ -59,6 +59,9 @@
       "skippedFoldersKinHint": "Kins in selected folders will not be avaliable in Character Creation Tool",
       "skippedFoldersProfessionHint": "Professions in selected folders will not be avaliable in Character Creation Tool"
     },
-    "selectAdditionallHA": "Select Additional Heroic Ability"
+    "selectAdditionallHA": "Select Additional Heroic Ability",
+    "WARNING":{
+      "maxSkillValue": "Maximum allow attribute value is 18, value of {attributes} is set to 18"
+    }
   }
 }

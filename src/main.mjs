@@ -102,6 +102,8 @@ Hooks.on("renderAbstractSidebarTab", function (ev, app) {
   if (!currentButtons) return;
   const buttonExist = header.querySelector(".characer-creation");
   if(buttonExist) return
+  const div = document.createElement("div");
+  div.classList.add("header-actions","action-buttons","flexrow")
   const button = document.createElement("button");
   button.classList.add("characer-creation")
 
@@ -117,7 +119,8 @@ Hooks.on("renderAbstractSidebarTab", function (ev, app) {
     const creator = new game.dragonbane.characterCreation();
     creator.render({ force: true });
   });
-  currentButtons.after(button);
+  div.appendChild(button);
+  currentButtons.after(div);
 });
 
 Hooks.on("renderSettingsConfig", async (app, html, data) => {
