@@ -153,7 +153,7 @@ export default class DoDCharacterCreation extends HandlebarsApplicationMixin(
     context.numbersOfProfession = context.profession.length;
     context.selectedKin = context.kin[this._state.selectedKinIndex];
     context.selectedProfession =
-    context.profession[this._state.selectedProfessionIndex];
+      context.profession[this._state.selectedProfessionIndex];
     context._state = this._state;
     context.tabs[this._state.activeTab].cssClass = "active";
     context.config = CONFIG.DoD;
@@ -192,10 +192,9 @@ export default class DoDCharacterCreation extends HandlebarsApplicationMixin(
         context.kin[this._state.selectedKinIndex],
       );
       if (this._state.selectedHA === "") {
-        this._state.selectedHA = context.heroicAbilities[0]?.id ?? ""  ;
+        this._state.selectedHA = context.heroicAbilities[0]?.id ?? "";
       }
       context.selectedHA = await this._prepareSelectedHA();
-      
     }
 
     return context;
@@ -215,12 +214,13 @@ export default class DoDCharacterCreation extends HandlebarsApplicationMixin(
   // =========================
 
   async _prepareKin() {
-        const skippedFolder = await game.settings.get(
+    const skippedFolder = await game.settings.get(
       "dragonbane-character-creation-tool",
       "selectedFoldersKin",
     );
-    const items = game.items.filter((i) => 
-      i.type === "kin"  && !skippedFolder.includes(i.folder?.id),);
+    const items = game.items.filter(
+      (i) => i.type === "kin" && !skippedFolder.includes(i.folder?.id),
+    );
 
     const kin = items.map(async (item) => ({
       name: item.name,
@@ -241,8 +241,9 @@ export default class DoDCharacterCreation extends HandlebarsApplicationMixin(
       "dragonbane-character-creation-tool",
       "selectedFoldersProfessions",
     );
-    const items = game.items.filter((i) => 
-      i.type === "profession" && !skippedFolder.includes(i.folder?.id));
+    const items = game.items.filter(
+      (i) => i.type === "profession" && !skippedFolder.includes(i.folder?.id),
+    );
 
     const profession = items.map(async (item) => ({
       name: item.name,
@@ -334,7 +335,9 @@ export default class DoDCharacterCreation extends HandlebarsApplicationMixin(
     const profession = allProfession[this._state.selectedProfessionIndex];
     const gearTable = game.tables.filter((table) => {
       const tableName = table.name.toLowerCase();
-      const professionMatch = tableName.includes(profession?.name.toLowerCase());
+      const professionMatch = tableName.includes(
+        profession?.name.toLowerCase(),
+      );
       const gearMatch = gear.some((word) =>
         tableName.startsWith(word.slice(0, 5).toLowerCase()),
       );
@@ -387,7 +390,7 @@ export default class DoDCharacterCreation extends HandlebarsApplicationMixin(
   async _prepareHA(profession, kin) {
     const professionHA = profession?.abilities ?? [];
     const kinHA = kin?.abilities ?? [];
-    if(!kinHA) return {}
+    if (!kinHA) return {};
     const abilityNames = [...professionHA, ...kinHA].map(
       (ability) => ability.name,
     );
@@ -399,7 +402,7 @@ export default class DoDCharacterCreation extends HandlebarsApplicationMixin(
       (item) =>
         item.type === "ability" &&
         !abilityNames.includes(item.name) &&
-        !skippedFolder.includes(item.folder?.id)
+        !skippedFolder.includes(item.folder?.id),
     );
 
     const HA = worldHA.map((item) => ({
@@ -411,7 +414,7 @@ export default class DoDCharacterCreation extends HandlebarsApplicationMixin(
   }
   async _prepareSelectedHA() {
     const HA = await fromUuid(this._state.selectedHA);
-    if(!HA) return {}
+    if (!HA) return {};
     const selectedHA = {
       name: HA.name,
       itemDescription: await this.enrich(HA.system.itemDescription),
@@ -471,7 +474,13 @@ export default class DoDCharacterCreation extends HandlebarsApplicationMixin(
         const maxOtherSkills = this._state.numberOfSelectedSkills;
 
         const numberOfProfessionSkills = selectedProfessionSkills.size;
+        const elmentProfessionSkill = element.querySelector(
+          ".selected-skill-proffesion",
+        );
+        elmentProfessionSkill.innerText = numberOfProfessionSkills;
         const numberOfOtherSkills = selectedOtherSkills.size;
+        const elmentOtherSkill = element.querySelector(".selected-skill-other");
+        elmentOtherSkill.innerText = numberOfOtherSkills;
 
         professionSkills.forEach((input) => {
           const skill = getSkill(input);
@@ -534,24 +543,23 @@ export default class DoDCharacterCreation extends HandlebarsApplicationMixin(
       });
     }
     const attribueteTab = element.querySelector(".tab.attributes.active");
-    if(attribueteTab){
+    if (attribueteTab) {
       const inputs = attribueteTab.querySelectorAll("input");
-            
-      inputs.forEach(input =>{
-        input.addEventListener("change",() => {
+
+      inputs.forEach((input) => {
+        input.addEventListener("change", () => {
           const attribute = input.dataset.attribute;
           let value = Number(input.value);
-          if(value > 18){
+          if (value > 18) {
             value = 18;
             DoD_Utility.WARNING("DCCT.WARNING.maxSkillValue", {
               attributes: game.i18n.localize(CONFIG.DoD.attributes[attribute]),
             });
           }
           this._state.attributes[attribute] = value;
-          this.render()
-        })
-
-      })
+          this.render();
+        });
+      });
     }
   }
   _updateSwapOptions(selects) {
@@ -656,9 +664,9 @@ export default class DoDCharacterCreation extends HandlebarsApplicationMixin(
 
     switch (type) {
       case "name":
-        if(value === ""){
+        if (value === "") {
           this._state.name = result.results[0].name;
-        }else{
+        } else {
           this._state.name = value;
         }
         break;
@@ -930,66 +938,67 @@ export default class DoDCharacterCreation extends HandlebarsApplicationMixin(
     ) {
       nextTabName = "additionalHA";
     }
-    if(currentTabName === "attributes"){
-      const inputs= app.form.querySelectorAll("input");
-      inputs.forEach(input =>{
+    if (currentTabName === "attributes") {
+      const inputs = app.form.querySelectorAll("input");
+      inputs.forEach((input) => {
         const attribute = input.dataset.attribute;
         this._state.attributes[attribute] = Number(input.value);
-      })
+      });
     }
     this._state.activeTab = nextTabName;
     currentTab.classList.remove("active");
     nextTab.classList.add("active");
     this.render();
   }
-async _selectGearOptions(description) {
-  const localizedOr = game.i18n.localize("DCCT.characterCreation.or").trim();
-  const escapedOr = localizedOr.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-  const orRegex = new RegExp(
-    `((?:@UUID\\[([^\\]]+)\\]\\{([^}]+)\\})` +
-      `(?:\\s+(?:or|${escapedOr})\\s+` +
-      `@UUID\\[([^\\]]+)\\]\\{([^}]+)\\})+)`,
-    "gi",
-  );
+  async _selectGearOptions(description) {
+    const localizedOr = game.i18n.localize("DCCT.characterCreation.or").trim();
+    const escapedOr = localizedOr.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    const orRegex = new RegExp(
+      `((?:@UUID\\[([^\\]]+)\\]\\{([^}]+)\\})` +
+        `(?:\\s+(?:or|${escapedOr})\\s+` +
+        `@UUID\\[([^\\]]+)\\]\\{([^}]+)\\})+)`,
+      "gi",
+    );
 
-  let result = description;
-  const matches = [...description.matchAll(orRegex)];
+    let result = description;
+    const matches = [...description.matchAll(orRegex)];
 
-  for (const match of matches) {
-    const [fullMatch] = match;
+    for (const match of matches) {
+      const [fullMatch] = match;
 
-    const optionRegex = /@UUID\[([^\]]+)\]\{([^}]+)\}/gi;
-    const options = [...fullMatch.matchAll(optionRegex)].map((m) => ({
-      uuid: m[1],
-      text: m[0],
-    }));
+      const optionRegex = /@UUID\[([^\]]+)\]\{([^}]+)\}/gi;
+      const options = [...fullMatch.matchAll(optionRegex)].map((m) => ({
+        uuid: m[1],
+        text: m[0],
+      }));
 
-    if (options.length < 2) continue;
-    const enrichedOptions = [];
+      if (options.length < 2) continue;
+      const enrichedOptions = [];
 
-    for (const option of options) {
-      const html = await foundry.applications.ux.TextEditor.implementation.enrichHTML(
-        option.text,
-        { async: true },
-      );
+      for (const option of options) {
+        const html =
+          await foundry.applications.ux.TextEditor.implementation.enrichHTML(
+            option.text,
+            { async: true },
+          );
 
-      enrichedOptions.push({
-        ...option,
-        html,
-      });
-    }
+        enrichedOptions.push({
+          ...option,
+          html,
+        });
+      }
 
-    const optionHTML = enrichedOptions
-      .map(
-        (option) => `
+      const optionHTML = enrichedOptions
+        .map(
+          (option) => `
           <option value="${option.uuid}">
             ${option.html}
           </option>
         `,
-      )
-      .join("");
+        )
+        .join("");
 
-    const content = `
+      const content = `
       <form>
         <div class="form-group">
           <label>
@@ -1003,96 +1012,87 @@ async _selectGearOptions(description) {
       </form>
     `;
 
-    const selected = await foundry.applications.api.DialogV2.wait({
-      window: {
-        title: game.i18n.localize(
-          "DCCT.characterCreation.selectGearOption",
-        ),
-      },
+      const selected = await foundry.applications.api.DialogV2.wait({
+        window: {
+          title: game.i18n.localize("DCCT.characterCreation.selectGearOption"),
+        },
 
-      content,
+        content,
 
-      buttons: [
-        {
-          action: "ok",
-          label: game.i18n.localize("DCCT.characterCreation.ok"),
-          icon: "fas fa-check",
-          default: true,
+        buttons: [
+          {
+            action: "ok",
+            label: game.i18n.localize("DCCT.characterCreation.ok"),
+            icon: "fas fa-check",
+            default: true,
 
-          callback: (event, button) => {
-            return button.form.querySelector(
-              '[name="gear-option"]',
-            ).value;
+            callback: (event, button) => {
+              return button.form.querySelector('[name="gear-option"]').value;
+            },
           },
-        },
 
-        {
-          action: "cancel",
-          label: game.i18n.localize("DCCT.characterCreation.cancel"),
-          icon: "fas fa-times",
-        },
-      ],
-    });
+          {
+            action: "cancel",
+            label: game.i18n.localize("DCCT.characterCreation.cancel"),
+            icon: "fas fa-times",
+          },
+        ],
+      });
 
-    if (!selected) {
-      return "";
-    }
+      if (!selected) {
+        return "";
+      }
 
-    // Find the selected UUID and replace the whole OR expression
-    const selectedOption = options.find(
-      (option) => option.uuid === selected,
-    );
+      // Find the selected UUID and replace the whole OR expression
+      const selectedOption = options.find((option) => option.uuid === selected);
 
-    if (selectedOption) {
-      result = result.replace(fullMatch, selectedOption.text);
-    }
-  }
-
-  // Roll handling stays unchanged
-  const rollRegex =
-    /\[\[\/(?:roll|r)\s+([^\]]+)\]\](?:\{[^}]+\})?\s*([^,@\[]+)?/gi;
-
-  const rollMatches = [...result.matchAll(rollRegex)];
-
-  for (const match of rollMatches) {
-    const [fullMatch, formula, textAfterRoll] = match;
-
-    const roll = await new Roll(formula.trim()).evaluate();
-
-    let flavor = textAfterRoll?.trim().replace(/^x\s*/, "") ?? "";
-
-    let uuidMatch = "";
-
-    if (!flavor) {
-      uuidMatch = result
-        .slice(match.index + fullMatch.length)
-        .match(/^\s*@UUID\[[^\]]+\]\{([^}]+)\}/i);
-
-      if (uuidMatch) {
-        flavor = uuidMatch[1].trim();
-      } else {
-        uuidMatch = "";
+      if (selectedOption) {
+        result = result.replace(fullMatch, selectedOption.text);
       }
     }
 
-    await roll.toMessage({
-      flavor: game.i18n.format("DCCT.message.flavor", {
-        flavor,
-      }),
-    });
+    // Roll handling stays unchanged
+    const rollRegex =
+      /\[\[\/(?:roll|r)\s+([^\]]+)\]\](?:\{[^}]+\})?\s*([^,@\[]+)?/gi;
 
-    if (uuidMatch === "") {
-      result = result.replace(
-        fullMatch,
-        roll.total + " " + flavor,
-      );
-    } else {
-      result = result.replace(fullMatch, roll.total);
+    const rollMatches = [...result.matchAll(rollRegex)];
+
+    for (const match of rollMatches) {
+      const [fullMatch, formula, textAfterRoll] = match;
+
+      const roll = await new Roll(formula.trim()).evaluate();
+
+      let flavor = textAfterRoll?.trim().replace(/^x\s*/, "") ?? "";
+
+      let uuidMatch = "";
+
+      if (!flavor) {
+        uuidMatch = result
+          .slice(match.index + fullMatch.length)
+          .match(/^\s*@UUID\[[^\]]+\]\{([^}]+)\}/i);
+
+        if (uuidMatch) {
+          flavor = uuidMatch[1].trim();
+        } else {
+          uuidMatch = "";
+        }
+      }
+
+      await roll.toMessage({
+        flavor: game.i18n.format("DCCT.message.flavor", {
+          flavor,
+        }),
+      });
+
+      if (uuidMatch === "") {
+        result = result.replace(fullMatch, roll.total + " " + flavor);
+      } else {
+        result = result.replace(fullMatch, roll.total);
+      }
     }
-  }
 
-  return result;
-}
+    return result;
+  }
   static #resetAttributes(ev) {
     this._state.attributes = {
       str: 0,
@@ -1209,20 +1209,20 @@ async _selectGearOptions(description) {
     const data = this._state;
     const kins = await this._prepareKin();
     const professions = await this._prepareProfession();
-    if(kins.length > 0){
+    if (kins.length > 0) {
       const kin = kins[this._state.selectedKinIndex];
-       data.kinUuid = kin?.uuid
-    }else{
+      data.kinUuid = kin?.uuid;
+    } else {
       data.kinUuid = "";
     }
-    
-    if(professions.length > 0){
+
+    if (professions.length > 0) {
       const profession = professions[this._state.selectedProfessionIndex].uuid;
-      data.professionUuid  = profession;
-    }else{
+      data.professionUuid = profession;
+    } else {
       data.professionUuid = "";
-    }   
-   
+    }
+
     if (canCreatActor) {
       const actor = new CreateActor(user._id, data);
       await actor.create();

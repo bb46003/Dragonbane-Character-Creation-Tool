@@ -1,6 +1,6 @@
 {
   "DCCT": {
-    "characterCreator": "Character Creaton Tool",
+    "characterCreator": "Character Creation Tool",
     "characterCreation": {
       "create": "Create Character",
       "next": "Select Next Tab",
@@ -37,7 +37,9 @@
       "chooseAttribute": "Select attribue to assigne rolled value",
       "assign": "Assigne",
       "or": "or",
-      "chooseOption": "Chose equipment option"
+      "chooseOption": "Chose equipment option",
+      "selectedSkill": "Number of selected Skills",
+      "avaliabeSkill": "Number of avalible Skills to select"
     },
     "currency": {
       "gold": "gold",
@@ -55,12 +57,12 @@
       "skippedFoldersHA": "Define folders with HA to skip",
       "skippedFoldersHAHint": "Heroic Abilities in selected folders will not be avaliable in Character Creation Tool",
       "skippedFoldersKin": "Define folders with Kins to skip",
-       "skippedFoldersProfessions": "Define folders with Professions to skip",
+      "skippedFoldersProfessions": "Define folders with Professions to skip",
       "skippedFoldersKinHint": "Kins in selected folders will not be avaliable in Character Creation Tool",
       "skippedFoldersProfessionHint": "Professions in selected folders will not be avaliable in Character Creation Tool"
     },
     "selectAdditionallHA": "Select Additional Heroic Ability",
-    "WARNING":{
+    "WARNING": {
       "maxSkillValue": "Maximum allow attribute value is 18, value of {attributes} is set to 18"
     }
   }

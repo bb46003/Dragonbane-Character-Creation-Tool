@@ -14,6 +14,21 @@
       align-items: center;
     }
   }
+  .profession-skills,
+  .other-skills {
+    display: grid;
+    .main-label {
+      text-align: center;
+      max-width: unset;
+    }
+    .skill-count {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
   .other-skills.light,
   .profession-skills.light {
     border: 1px solid black;

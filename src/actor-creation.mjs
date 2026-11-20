@@ -253,7 +253,7 @@ export default class CreateActor {
     if (weakness !== "") {
       await actor.update({ "system.weaknes": weakness });
     }
-    if(selectedHA !== ""){
+    if (selectedHA !== "") {
       const selectedHAItem = await fromUuid(selectedHA);
       const data = selectedHAItem.toObject();
       await actor.createEmbeddedDocuments("Item", [data]);

@@ -7,121 +7,173 @@ reviews:
         comments:
           - user:
               name: Unknown
-              email: ''
+              email: ""
             id: oZ-w5AoVCaEtt2PH6gck9
-            comment: ''
-            suggestion: ''
+            comment: ""
+            suggestion: ""
             type: approve
-            time: '2026-08-24T21:02:57.671Z'
+            time: "2026-08-24T21:02:57.671Z"
       pl:
         comments:
           - user:
               name: Unknown
-              email: ''
+              email: ""
             id: 5b-MA-lF2IqEnKxEWSLmA
-            comment: ''
-            suggestion: ''
+            comment: ""
+            suggestion: ""
             type: approve
-            time: '2026-08-24T21:03:02.024Z'
+            time: "2026-08-24T21:03:02.024Z"
   DCCT.settings.aditionalHA:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ''
+              email: ""
             id: FAwkxfuyt6A71gtCrv9g5
-            comment: ''
-            suggestion: ''
+            comment: ""
+            suggestion: ""
             type: approve
-            time: '2026-08-24T22:55:32.566Z'
+            time: "2026-08-24T22:55:32.566Z"
       pl:
         comments:
           - user:
               name: Unknown
-              email: ''
+              email: ""
             id: KPcfYJn2Q8BAhfrnmMT1o
-            comment: ''
-            suggestion: ''
+            comment: ""
+            suggestion: ""
             type: approve
-            time: '2026-08-24T22:55:35.907Z'
+            time: "2026-08-24T22:55:35.907Z"
   DCCT.settings.aditionalHAHint:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ''
+              email: ""
             id: X-AOF0ihd-1Lu33uFt53C
-            comment: ''
-            suggestion: ''
+            comment: ""
+            suggestion: ""
             type: approve
-            time: '2026-08-24T22:56:11.340Z'
+            time: "2026-08-24T22:56:11.340Z"
   DCCT.settings.skippedFoldersHA:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ''
+              email: ""
             id: SC_YDdrBBTUWqvZwXKj-f
-            comment: ''
-            suggestion: ''
+            comment: ""
+            suggestion: ""
             type: approve
-            time: '2026-08-24T22:58:00.880Z'
+            time: "2026-08-24T22:58:00.880Z"
   DCCT.settings.skippedFoldersHAHint:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ''
+              email: ""
             id: yTnzPZ4Zy-LbGQSRSAoeL
-            comment: ''
-            suggestion: ''
+            comment: ""
+            suggestion: ""
             type: approve
-            time: '2026-08-24T22:58:44.768Z'
+            time: "2026-08-24T22:58:44.768Z"
           - user:
               name: Unknown
-              email: ''
+              email: ""
             id: I1W5hMNiHVboFlVaJnBwB
-            comment: ''
-            suggestion: ''
+            comment: ""
+            suggestion: ""
             type: approve
-            time: '2026-08-24T23:00:48.685Z'
+            time: "2026-08-24T23:00:48.685Z"
   DCCT.settings.skippedFoldersKinHint:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ''
+              email: ""
             id: 0n1TB-g0uSZVwCz1bttgx
-            comment: ''
-            suggestion: ''
+            comment: ""
+            suggestion: ""
             type: approve
-            time: '2026-08-24T23:00:28.788Z'
+            time: "2026-08-24T23:00:28.788Z"
   DCCT.settings.skippedFoldersProfessionHint:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ''
+              email: ""
             id: aiSOWfKFlf0qm7Smjb3l5
-            comment: ''
-            suggestion: ''
+            comment: ""
+            suggestion: ""
             type: approve
-            time: '2026-08-24T23:01:16.573Z'
+            time: "2026-08-24T23:01:16.573Z"
   DCCT.selectAdditionallHA:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ''
+              email: ""
             id: V2s6H7MSRZ-4wkJoLkMl6
-            comment: ''
-            suggestion: ''
+            comment: ""
+            suggestion: ""
             type: approve
-            time: '2026-08-24T23:01:51.094Z'
+            time: "2026-08-24T23:01:51.094Z"
+  DCCT.characterCreation.selectedSkill:
+    locales:
+      pl:
+        comments:
+          - user:
+              name: Unknown
+              email: ""
+            id: RWex4KVaLml5CECKst0-G
+            comment: ""
+            suggestion: ""
+            type: approve
+            time: "2026-11-20T13:01:53.429Z"
+          - user:
+              name: Unknown
+              email: ""
+            id: oehxfD8uOfnkWr-GLg8g9
+            comment: ""
+            suggestion: ""
+            type: approve
+            time: "2026-11-20T13:02:10.041Z"
+      en:
+        comments:
+          - user:
+              name: Unknown
+              email: ""
+            id: uqK1mGftgQTMQ4Y-XP1A9
+            comment: ""
+            suggestion: ""
+            type: approve
+            time: "2026-11-20T13:01:59.192Z"
+  DCCT.characterCreation.avaliabeSkill:
+    locales:
+      pl:
+        comments:
+          - user:
+              name: Unknown
+              email: ""
+            id: McKtzQhdvTP1A0eEhlJsJ
+            comment: ""
+            suggestion: ""
+            type: approve
+            time: "2026-11-20T13:02:46.713Z"
+      en:
+        comments:
+          - user:
+              name: Unknown
+              email: ""
+            id: 4x6MUqfl26gI_6QnGCUhZ
+            comment: ""
+            suggestion: ""
+            type: approve
+            time: "2026-11-20T13:02:50.139Z"

@@ -7,7 +7,15 @@
     <label>{{localize "DCCT.characterCreation.skillsProfession"}}</label>
     <div class="form-group profession-skills" data-type="profession">
 
-      <label>{{localize "DCCT.characterCreation.skillsProfessionAll"}}</label>
+      <label class="main-label">{{localize
+          "DCCT.characterCreation.skillsProfessionAll"
+        }}</label>
+      <div class="skill-count">
+        <p>{{localize "DCCT.characterCreation.selectedSkill"}}</p>
+        <p class="selected-skill-proffesion">0</p>
+        <p>/</p>
+        <p>{{localize "DCCT.characterCreation.avaliabeSkill"}} 6</p>
+      </div>
       <div class="flexcol skill-list">
 
         {{#each skills.professionSkills as |skill|}}
@@ -21,7 +29,16 @@
       </div>
     </div>
     <div class="form-group other-skills" data-type="other">
-      <label>{{localize "DCCT.characterCreation.skillsOther"}}</label>
+      <label class="main-label">{{localize
+          "DCCT.characterCreation.skillsOther"
+        }}</label>
+      <div class="skill-count">
+        <p>{{localize "DCCT.characterCreation.selectedSkill"}}</p>
+        <p class="selected-skill-other">0</p>
+        <p>/</p>
+        <p>{{localize "DCCT.characterCreation.avaliabeSkill"}}
+          {{_state.numberOfSelectedSkills}}</p>
+      </div>
       <div class="flexcol skill-list">
         {{#each skills.availableSkills as |skill|}}
           <div class="flexrow" data-name="{{skill}}">

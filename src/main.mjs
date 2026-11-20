@@ -36,7 +36,7 @@ Hooks.once("init", function () {
       scope: "world",
       type: Array,
       config: false,
-        default: []
+      default: [],
     },
   );
   game.settings.register(
@@ -59,7 +59,7 @@ Hooks.once("init", function () {
       scope: "world",
       type: Array,
       config: false,
-      default: []
+      default: [],
     },
   );
   game.settings.register(
@@ -82,7 +82,7 @@ Hooks.once("init", function () {
       scope: "world",
       type: Array,
       config: false,
-      default: []
+      default: [],
     },
   );
   registerHandlebarsHelpers();
@@ -90,10 +90,9 @@ Hooks.once("init", function () {
 
 Hooks.on("renderAbstractSidebarTab", function (ev, app) {
   const element = app;
-  const actorTab = document.querySelector(".actors-sidebar")
-   if (!actorTab) return;
+  const actorTab = document.querySelector(".actors-sidebar");
+  if (!actorTab) return;
   const header = actorTab.querySelector(".directory-header.flexcol");
- 
 
   const currentButtons = header.querySelector(
     ".header-actions.action-buttons.flexrow",
@@ -101,11 +100,11 @@ Hooks.on("renderAbstractSidebarTab", function (ev, app) {
 
   if (!currentButtons) return;
   const buttonExist = header.querySelector(".characer-creation");
-  if(buttonExist) return
+  if (buttonExist) return;
   const div = document.createElement("div");
-  div.classList.add("header-actions","action-buttons","flexrow")
+  div.classList.add("header-actions", "action-buttons", "flexrow");
   const button = document.createElement("button");
-  button.classList.add("characer-creation")
+  button.classList.add("characer-creation");
 
   button.type = "button";
   button.classList.add("header-control");
@@ -154,12 +153,12 @@ Hooks.on("renderSettingsConfig", async (app, html, data) => {
           config.skipKey,
           ev.target.checked,
         );
-        if(!ev.target.checked){
+        if (!ev.target.checked) {
           await game.settings.set(
             "dragonbane-character-creation-tool",
             config.selectedKey,
-            []
-          )
+            [],
+          );
         }
         app.render({ force: true });
       });
@@ -178,30 +177,27 @@ Hooks.on("renderSettingsConfig", async (app, html, data) => {
     if (!setting) {
       continue;
     }
-const uniqueFolders = [
-  ...new Map(
-    game.items
-      .filter((item) => item.type === config.itemType && item.folder)
-      .map((item) => {
-        const folder = item.folder;
+    const uniqueFolders = [
+      ...new Map(
+        game.items
+          .filter((item) => item.type === config.itemType && item.folder)
+          .map((item) => {
+            const folder = item.folder;
 
- const name = [
-  ...(folder.ancestors ?? []).toReversed(),
-  folder,
-]
-  .map((f) => f.name)
-  .join(" / ");
+            const name = [...(folder.ancestors ?? []).toReversed(), folder]
+              .map((f) => f.name)
+              .join(" / ");
 
-        return [
-          folder.id,
-          {
-            name,
-            folderId: folder.id,
-          },
-        ];
-      }),
-  ).values(),
-];
+            return [
+              folder.id,
+              {
+                name,
+                folderId: folder.id,
+              },
+            ];
+          }),
+      ).values(),
+    ];
     const selectedFolders = game.settings.get(
       "dragonbane-character-creation-tool",
       config.selectedKey,
@@ -236,10 +232,10 @@ const uniqueFolders = [
 });
 function registerHandlebarsHelpers() {
   Handlebars.registerHelper("isInArray", (string, array) => {
-    if(string === null){
-      return false
-    }else{
-    return array.includes(string);
+    if (string === null) {
+      return false;
+    } else {
+      return array.includes(string);
     }
   });
 }
